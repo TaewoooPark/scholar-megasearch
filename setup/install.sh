@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # scholar-megasearch installer
-# Reconstitutes the lit-megasearch literature-search stack on a fresh machine:
+# Reconstitutes the scholar-megasearch literature-search stack on a fresh machine:
 #   1. installs the skills into ~/.claude/skills/
 #   2. builds the search/acquisition venv (~/.claude/skill_venv) from requirements.txt
 #   3. installs the three MCP servers (arxiv-mcp-server, semantic-scholar-mcp, paper-search-mcp)
@@ -22,7 +22,7 @@ echo "    skills: ${SKILLS_DST}"
 
 # --- 1. skills ---------------------------------------------------------------
 mkdir -p "${SKILLS_DST}"
-for s in lit-megasearch arxiv-search semantic-scholar-mcp; do
+for s in scholar-megasearch arxiv-search semantic-scholar-mcp; do
   echo "==> installing skill: ${s}"
   rm -rf "${SKILLS_DST:?}/${s}"
   cp -R "${REPO_DIR}/skills/${s}" "${SKILLS_DST}/${s}"
@@ -66,4 +66,4 @@ echo "  merge the \"mcpServers\" entries from ${RESOLVED}"
 echo "  into the \"mcpServers\" block of ~/.claude.json, then restart Claude Code."
 echo
 echo "Verify the skill loads:  ask Claude '논문 방대하게 검색' or run"
-echo "  python3 ${SKILLS_DST}/lit-megasearch/scripts/merge_corpus.py --help"
+echo "  python3 ${SKILLS_DST}/scholar-megasearch/scripts/merge_corpus.py --help"

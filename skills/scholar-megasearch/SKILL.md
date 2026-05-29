@@ -1,5 +1,5 @@
 ---
-name: lit-megasearch
+name: scholar-megasearch
 description: >-
   Massive multi-source academic literature search via subagent orchestration.
   Fans out parallel searchers across every available scholarly source — arXiv,
@@ -13,7 +13,7 @@ description: >-
   "메가 검색", "search every source", "전수조사".
 ---
 
-# lit-megasearch
+# scholar-megasearch
 
 Integrates every academic search MCP/skill in this environment into one fan-out →
 merge → synthesize pipeline. Each subagent owns one **source bucket** and searches in
@@ -54,7 +54,7 @@ pdf_url, url, citations, abstract, **source**, **query**) and does NOT dedupe.
 
 ### 5. Merge into one corpus
 ```bash
-python3 ~/.claude/skills/lit-megasearch/scripts/merge_corpus.py \
+python3 ~/.claude/skills/scholar-megasearch/scripts/merge_corpus.py \
   ./literature_search/<slug>_<date>/raw \
   -o ./literature_search/<slug>_<date>/corpus.json \
   --md ./literature_search/<slug>_<date>/corpus.md
@@ -75,7 +75,7 @@ Read `corpus.json` and write `summary.md` in the run dir:
 ### 7. Acquire original PDFs
 To pull the original PDFs of the top-K ranked papers:
 ```bash
-python3 ~/.claude/skills/lit-megasearch/scripts/fetch_pdfs.py \
+python3 ~/.claude/skills/scholar-megasearch/scripts/fetch_pdfs.py \
   ./literature_search/<slug>_<date>/corpus.json \
   -o ./literature_search/<slug>_<date>/pdfs \
   --email you@example.com --top 25

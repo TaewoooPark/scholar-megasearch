@@ -8,9 +8,9 @@
 <p align="center">
   <a href="./README.md">English README</a>
   &nbsp;·&nbsp;
-  <a href="./skills/lit-megasearch/SKILL.md">SKILL.md</a>
+  <a href="./skills/scholar-megasearch/SKILL.md">SKILL.md</a>
   &nbsp;·&nbsp;
-  <a href="./skills/lit-megasearch/references/sources.md">소스 카탈로그</a>
+  <a href="./skills/scholar-megasearch/references/sources.md">소스 카탈로그</a>
 </p>
 
 <p align="center">
@@ -37,7 +37,7 @@
 
 ## 무엇인가
 
-`scholar-megasearch`는 단일 Claude Code 스킬 **lit-megasearch**와, 그것을 구동하는
+`scholar-megasearch`는 단일 Claude Code 스킬 **scholar-megasearch**와, 그것을 구동하는
 데 필요한 보조 스킬·MCP 서버를 하나로 묶은 패키지다. DB를 하나씩 조회하는 대신,
 주제를 여러 facet으로 분해하고 각 **소스 버킷**을 독립 서브에이전트에 할당해 병렬로
 팬아웃한다. 모든 검색 결과는 하나의 스키마로 정규화되어 DOI → arXiv-id → 정규화 제목
@@ -77,7 +77,7 @@ fetch_pdfs.py     →  pdf_url → arXiv → Unpaywall OA → MCP 폴백  →  p
 
 | 경로 | 역할 |
 |------|------|
-| `skills/lit-megasearch/` | 오케스트레이션 스킬 — `SKILL.md`, 소스 카탈로그, 오케스트레이션 템플릿, 검증된 스크립트 3종(`merge_corpus.py`, `fetch_pdfs.py`, `search_local.py`). |
+| `skills/scholar-megasearch/` | 오케스트레이션 스킬 — `SKILL.md`, 소스 카탈로그, 오케스트레이션 템플릿, 검증된 스크립트 3종(`merge_corpus.py`, `fetch_pdfs.py`, `search_local.py`). |
 | `skills/arxiv-search/` | 보조 스킬 — venv 기반 arXiv / Semantic Scholar / DuckDuckGo 검색 패턴. |
 | `skills/semantic-scholar-mcp/` | Semantic Scholar MCP 서버 (벤더링 — [출처](#출처-attribution) 참조). |
 | `setup/install.sh` | 스킬 설치, venv 빌드, MCP 서버 3종 설치, 해석된 MCP 설정 출력. |
@@ -116,12 +116,12 @@ spin–orbit torque switching 모든 DB에서 다 찾고 PDF까지 받아줘
 
 ```bash
 # 소스별 결과 파일을 하나의 랭킹 코퍼스로 병합
-python3 ~/.claude/skills/lit-megasearch/scripts/merge_corpus.py \
+python3 ~/.claude/skills/scholar-megasearch/scripts/merge_corpus.py \
   ./literature_search/<주제>_<날짜>/raw \
   -o corpus.json --md corpus.md --min-sources 2
 
 # 상위 25편 원본 PDF 확보
-python3 ~/.claude/skills/lit-megasearch/scripts/fetch_pdfs.py \
+python3 ~/.claude/skills/scholar-megasearch/scripts/fetch_pdfs.py \
   corpus.json -o ./pdfs --email you@example.com --top 25
 ```
 
@@ -151,7 +151,7 @@ literature_search/<주제>_<날짜>/
 | G · 웹 | DuckDuckGo, GitHub, crawl4ai / firecrawl |
 
 버킷별 전체 도구 목록과 도메인 → 버킷 라우팅 표는
-[`skills/lit-megasearch/references/sources.md`](./skills/lit-megasearch/references/sources.md)에 있다.
+[`skills/scholar-megasearch/references/sources.md`](./skills/scholar-megasearch/references/sources.md)에 있다.
 
 ## 출처 (Attribution)
 
@@ -161,5 +161,5 @@ literature_search/<주제>_<날짜>/
 - **paper-search-mcp** ([openags/paper-search-mcp](https://github.com/openags/paper-search-mcp))와
   **arxiv-mcp-server**는 `setup/install.sh`가 상위 소스에서 설치한다.
 
-이 저장소의 원본 작업(`lit-megasearch`·`arxiv-search` 스킬과 설치 스크립트)은
+이 저장소의 원본 작업(`scholar-megasearch`·`arxiv-search` 스킬과 설치 스크립트)은
 [MIT License](./LICENSE)로 배포된다.

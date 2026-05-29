@@ -25,7 +25,7 @@ FS guarantees for the script) — so have each agent RETURN its records too, via
 
 ```js
 export const meta = {
-  name: 'lit-megasearch',
+  name: 'scholar-megasearch',
   description: 'Fan out academic search across source buckets, merge into one corpus',
   phases: [{ title: 'Search' }, { title: 'Synthesize' }],
 }

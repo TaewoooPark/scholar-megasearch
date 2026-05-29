@@ -8,9 +8,9 @@
 <p align="center">
   <a href="./README.ko.md">한국어 README</a>
   &nbsp;·&nbsp;
-  <a href="./skills/lit-megasearch/SKILL.md">SKILL.md</a>
+  <a href="./skills/scholar-megasearch/SKILL.md">SKILL.md</a>
   &nbsp;·&nbsp;
-  <a href="./skills/lit-megasearch/references/sources.md">Source catalog</a>
+  <a href="./skills/scholar-megasearch/references/sources.md">Source catalog</a>
 </p>
 
 <p align="center">
@@ -39,7 +39,7 @@
 
 ## What It Is
 
-`scholar-megasearch` packages a single Claude Code skill — **lit-megasearch** —
+`scholar-megasearch` packages a single Claude Code skill — **scholar-megasearch** —
 together with the supporting skills and MCP servers it needs to run. Instead of
 querying one database at a time, it decomposes a topic into facets, assigns each
 **source bucket** to its own subagent, and fans them out in parallel. Every hit is
@@ -82,7 +82,7 @@ math, or interdisciplinary).
 
 | Path | Role |
 |------|------|
-| `skills/lit-megasearch/` | The orchestration skill — `SKILL.md`, source catalog, orchestration templates, and three tested scripts (`merge_corpus.py`, `fetch_pdfs.py`, `search_local.py`). |
+| `skills/scholar-megasearch/` | The orchestration skill — `SKILL.md`, source catalog, orchestration templates, and three tested scripts (`merge_corpus.py`, `fetch_pdfs.py`, `search_local.py`). |
 | `skills/arxiv-search/` | Supporting skill — venv-based arXiv / Semantic Scholar / DuckDuckGo search patterns. |
 | `skills/semantic-scholar-mcp/` | The Semantic Scholar MCP server (vendored — see [Attribution](#attribution)). |
 | `setup/install.sh` | Installs skills, builds the venvs, installs all three MCP servers, emits a resolved MCP config. |
@@ -122,12 +122,12 @@ Or run the scripts directly:
 
 ```bash
 # merge per-source result files into one ranked corpus
-python3 ~/.claude/skills/lit-megasearch/scripts/merge_corpus.py \
+python3 ~/.claude/skills/scholar-megasearch/scripts/merge_corpus.py \
   ./literature_search/<topic>_<date>/raw \
   -o corpus.json --md corpus.md --min-sources 2
 
 # acquire original PDFs for the top 25 ranked papers
-python3 ~/.claude/skills/lit-megasearch/scripts/fetch_pdfs.py \
+python3 ~/.claude/skills/scholar-megasearch/scripts/fetch_pdfs.py \
   corpus.json -o ./pdfs --email you@example.com --top 25
 ```
 
@@ -157,7 +157,7 @@ literature_search/<topic>_<date>/
 | G · Web | DuckDuckGo, GitHub, crawl4ai / firecrawl |
 
 Full per-bucket tool lists and the domain → bucket routing table are in
-[`skills/lit-megasearch/references/sources.md`](./skills/lit-megasearch/references/sources.md).
+[`skills/scholar-megasearch/references/sources.md`](./skills/scholar-megasearch/references/sources.md).
 
 ## Attribution
 
@@ -167,5 +167,5 @@ Full per-bucket tool lists and the domain → bucket routing table are in
 - **paper-search-mcp** ([openags/paper-search-mcp](https://github.com/openags/paper-search-mcp))
   and **arxiv-mcp-server** are installed from their upstream sources by `setup/install.sh`.
 
-Original work in this repository (the `lit-megasearch` and `arxiv-search` skills and
+Original work in this repository (the `scholar-megasearch` and `arxiv-search` skills and
 the setup scripts) is released under the [MIT License](./LICENSE).

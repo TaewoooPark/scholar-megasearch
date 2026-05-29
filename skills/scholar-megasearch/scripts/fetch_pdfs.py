@@ -27,7 +27,7 @@ import sys
 import urllib.parse
 import urllib.request
 
-UA = "lit-megasearch/1.0 (mailto:%s)"
+UA = "scholar-megasearch/1.0 (mailto:%s)"
 TIMEOUT = 45
 
 

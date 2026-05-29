@@ -1,5 +1,5 @@
 # Python packages for the search/acquisition venv (skill_venv).
-# Pinned to the versions verified working with lit-megasearch.
+# Pinned to the versions verified working with scholar-megasearch.
 arxiv==2.4.0
 semanticscholar==0.11.0
 ddgs==9.10.0
