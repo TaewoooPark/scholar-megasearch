@@ -1,30 +1,50 @@
+---
+name: arxiv-search
+description: >-
+  Single-machine academic paper search and PDF handling for any research field.
+  Searches arXiv and Semantic Scholar without an API key, with DuckDuckGo as a
+  web fallback, and extracts/downloads PDFs locally. MCP servers (arxiv-mcp-server,
+  Ai2 Asta) are used when available. Use for quick, focused lookups in any
+  discipline; for a broad multi-database sweep use scholar-megasearch instead.
+---
+
 # Academic Paper Search Skill
 
-학술 논문 검색 전용 스킬. API 키 없이 arXiv, Semantic Scholar를 검색하며, MCP 서버(arxiv-mcp-server, Ai2 Asta)도 활용 가능하다.
+A field-agnostic skill for searching scholarly papers from one machine. It queries
+arXiv and Semantic Scholar without an API key, falls back to DuckDuckGo for web/GitHub
+material, and downloads or extracts text from PDFs. The MCP servers
+(`arxiv-mcp-server`, Ai2 Asta) are used automatically inside a Claude Code session when
+registered.
 
-## 언제 사용하는가
+The examples below use placeholder topics (`<your topic>`, generic keyword strings).
+Swap in your own research terms — nothing here is tied to a particular field.
 
-- 논문/학술 자료 검색 요청 시
-- arXiv 논문 검색 또는 다운로드 시
-- Semantic Scholar로 인용/피인용 분석 시
-- PDF 부록 코드 추출 시
+## When to use
 
-## 설치된 도구
+- Searching for papers / scholarly material on any topic
+- Searching or downloading from arXiv
+- Citation / cited-by analysis via Semantic Scholar
+- Extracting text or supplementary code from a PDF
 
-| 도구 | 경로 / 방법 | 용도 |
-|------|------------|------|
-| `arxiv` Python 패키지 | `~/.claude/skill_venv/bin/python3` | arXiv 검색 |
-| `semanticscholar` Python 패키지 | `~/.claude/skill_venv/bin/python3` | Semantic Scholar 검색 |
-| `arxiv-mcp-server` | MCP 등록 완료 (uvx) | Claude Code MCP 도구 |
-| `asta` (Ai2 Asta, 원격) | MCP 등록 완료 | Claude Code MCP 도구 |
-| `paper-search-mcp` | `~/.claude/skill_venv` | arXiv+SS+PubMed 통합 |
-| `ddgs` | `~/.claude/skill_venv/bin/python3` | DuckDuckGo 보조 검색 |
-| `pdfplumber` | `~/.claude/skill_venv/bin/python3` | PDF 텍스트 추출 |
-| `crwl` (crawl4ai) | `~/.claude/skill_venv/bin/crwl` | 웹 크롤링 |
+For an exhaustive, deduplicated sweep across 20+ databases, use the
+**scholar-megasearch** skill instead — this skill is for fast, single-source lookups.
 
-## 핵심 명령 패턴
+## Installed tools
 
-### 1. arXiv 검색 (권장)
+| Tool | Path / method | Purpose |
+|------|---------------|---------|
+| `arxiv` Python package | `~/.claude/skill_venv/bin/python3` | arXiv search |
+| `semanticscholar` Python package | `~/.claude/skill_venv/bin/python3` | Semantic Scholar search |
+| `arxiv-mcp-server` | registered MCP (uvx) | Claude Code MCP tools |
+| `asta` (Ai2 Asta, remote) | registered MCP | Claude Code MCP tools |
+| `paper-search-mcp` | `~/.claude/skill_venv` | arXiv + SS + PubMed unified |
+| `ddgs` | `~/.claude/skill_venv/bin/python3` | DuckDuckGo fallback search |
+| `pdfplumber` | `~/.claude/skill_venv/bin/python3` | PDF text extraction |
+| `crwl` (crawl4ai) | `~/.claude/skill_venv/bin/crwl` | Web crawling |
+
+## Core command patterns
+
+### 1. arXiv search (recommended)
 
 ```python
 ~/.claude/skill_venv/bin/python3 << 'EOF'
@@ -32,7 +52,7 @@ import arxiv, json
 
 client = arxiv.Client()
 search = arxiv.Search(
-    query="MuMax3 ferrimagnet domain wall mass",
+    query="<your topic keywords>",
     max_results=20,
     sort_by=arxiv.SortCriterion.Relevance
 )
@@ -51,7 +71,7 @@ print(json.dumps(results, indent=2, ensure_ascii=False))
 EOF
 ```
 
-### 2. Semantic Scholar 검색 (200M+ 논문)
+### 2. Semantic Scholar search (200M+ papers)
 
 ```python
 ~/.claude/skill_venv/bin/python3 << 'EOF'
@@ -60,7 +80,7 @@ import json
 
 sch = SemanticScholar()
 results = sch.search_paper(
-    "MuMax3 domain wall inertia ferrimagnet",
+    "<your topic keywords>",
     limit=20,
     fields=["title", "authors", "year", "externalIds", "openAccessPdf", "citationCount", "abstract"]
 )
@@ -79,7 +99,7 @@ print(json.dumps(output, indent=2, ensure_ascii=False))
 EOF
 ```
 
-### 3. DuckDuckGo 보조 검색 (GitHub, 블로그 등)
+### 3. DuckDuckGo fallback search (GitHub, blogs, etc.)
 
 ```python
 ~/.claude/skill_venv/bin/python3 << 'EOF'
@@ -87,14 +107,14 @@ from ddgs import DDGS
 import json
 
 results = DDGS().text(
-    "site:github.com MuMax3 ferrimagnet domain wall simulation",
+    "site:github.com <your topic keywords>",
     max_results=15
 )
 print(json.dumps(results, indent=2, ensure_ascii=False))
 EOF
 ```
 
-### 4. PDF 논문 텍스트 추출
+### 4. Extract text from a PDF
 
 ```python
 ~/.claude/skill_venv/bin/python3 << 'EOF'
@@ -109,13 +129,13 @@ with pdfplumber.open("paper.pdf") as pdf:
 EOF
 ```
 
-### 5. URL → 마크다운 스크래핑
+### 5. URL → markdown scraping
 
 ```bash
 ~/.claude/skill_venv/bin/crwl "https://arxiv.org/abs/2401.12345" -o markdown
 ```
 
-### 6. arXiv PDF 다운로드
+### 6. Download an arXiv PDF
 
 ```python
 ~/.claude/skill_venv/bin/python3 << 'EOF'
@@ -128,43 +148,45 @@ print(f"Downloaded: {paper.title}")
 EOF
 ```
 
-## MCP 사용 (Claude Code 세션 내)
+## Using MCP (inside a Claude Code session)
 
-`arxiv-mcp-server`와 `asta`(Ai2 Asta, Semantic Scholar)가 Claude Code에 등록되어 있다.
-Claude Code 세션에서 자동으로 MCP 도구를 호출 가능하다.
+`arxiv-mcp-server` and `asta` (Ai2 Asta, Semantic Scholar) are registered with Claude
+Code. Inside a session, the MCP tools can be called automatically (load their schemas
+with `ToolSearch` first when they are deferred).
 
-## 프로젝트 헬퍼 스크립트
+## Search strategy guide
 
-프로젝트 폴더의 `tools/` 디렉토리에 통합 검색 스크립트가 있다:
+Pick the tool that matches what you are after — the keyword strings are just
+placeholders for your own terms.
 
-```bash
-# 통합 학술 검색
-~/.claude/skill_venv/bin/python3 \
-  /path/to/URP_Simulation_MuMax3_References/tools/search_papers.py \
-  "MuMax3 ferrimagnet domain wall" --limit 20 --output results.json
-```
+| Goal | Recommended tool | Example query |
+|------|------------------|---------------|
+| Latest arXiv preprints | `arxiv` package | `<topic> 2024 2025` |
+| Highly-cited / canonical papers | Semantic Scholar | `<topic> review survey` |
+| Code / implementations | `ddgs` `site:github.com` | `site:github.com <topic>` |
+| Published journal articles | Semantic Scholar + Crossref | `<topic> <venue name>` |
+| Non-English material | `ddgs` | a localized phrasing of `<topic>` |
 
-## 검색 전략 가이드 (MuMax3/자기학)
+## Choosing arXiv categories
 
-| 검색 대상 | 권장 도구 | 키워드 예시 |
-|----------|----------|------------|
-| 최신 arXiv 프리프린트 | `arxiv` 패키지 | `MuMax3 ferrimagnet 2024 2025` |
-| 인용수 높은 논문 | Semantic Scholar | `domain wall mass inertia simulation` |
-| GitHub 코드 | ddgs `site:github.com` | `site:github.com MuMax3 ferrimagnet` |
-| 물리 리뷰 저널 | Semantic Scholar + CrossRef | `Physical Review B domain wall mass` |
-| 한국어 자료 | ddgs | `도메인 월 MuMax3 시뮬레이션` |
+Filtering by category sharpens results. Pick the categories that match your field —
+the full taxonomy is at <https://arxiv.org/category_taxonomy>. A few common ones across
+disciplines:
 
-## 주요 arXiv 카테고리 (자기학)
-
-- `cond-mat.mes-hall` — 메조스코픽/나노구조 물리
-- `cond-mat.mtrl-sci` — 재료과학
-- `cond-mat.str-el` — 강상관계 전자계
-- `physics.comp-ph` — 계산물리
+- `cs.LG` / `cs.AI` — machine learning / artificial intelligence
+- `cs.CL` — computation and language (NLP)
+- `cs.CV` — computer vision
+- `stat.ML` — statistics: machine learning
+- `cond-mat.*` — condensed matter physics
+- `physics.comp-ph` — computational physics
+- `q-bio.*` — quantitative biology
+- `math.*` — mathematics
+- `eess.*` — electrical engineering and systems science
 
 ```python
-# 특정 카테고리 필터링
+# Filter to one or more categories and sort by most recent
 search = arxiv.Search(
-    query="domain wall mass ferrimagnet",
+    query="cat:cs.LG AND <topic keywords>",
     max_results=20,
     sort_by=arxiv.SortCriterion.SubmittedDate
 )

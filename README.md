@@ -91,12 +91,12 @@ high-precision shortlist that filters out single-index noise.
 A mid-depth sweep (≈ **L3 Deep**) on a focused topic looks roughly like this *(illustrative)*:
 
 ```
-topic: "spin–orbit torque switching in ferrimagnets"
+topic: "graph neural networks for molecular property prediction"
   facets:  6 subqueries        buckets: A B C E G (5 searchers)
   raw hits: ~310 across buckets
   unique:   ~150 after dedup   (≈60 corroborated by ≥2 databases)
   PDFs:     22 / 25 acquired   (3 flagged needs_mcp — paywalled)
-  output:   ./literature_search/spin-orbit-torque-ferri_2026-05-29/
+  output:   ./literature_search/gnn-molecular-property_2026-05-29/
 ```
 
 ## Install
@@ -133,20 +133,23 @@ terms (see [Attribution](#attribution)). Merge that file's `mcpServers` entries 
 Inside Claude Code, trigger the skill in natural language:
 
 ```
-search every database for spin–orbit torque switching and grab the PDFs
-MoE 관련 최근 1년 논문 방대하게 검색해줘, PDF까지
+search every database for graph neural networks and grab the PDFs
+do a massive literature search on mixture-of-experts routing from the last year, with PDFs
 ```
+
+The skill also understands trigger phrases in other languages, so a request written in,
+say, Korean or Japanese routes to the same pipeline.
 
 Or invoke it as a **slash command**, optionally pinning the depth level (see
 [Depth levels](#depth-levels)) — prepend `depth=N`, `LN`, or a bare `1–5`, or use a
-phrase like `quick` / `전수조사`. Everything after the command is the topic:
+phrase like `quick` / `exhaustive`. Everything after the command is the topic:
 
 ```
-/scholar-megasearch depth=4 spin–orbit torque switching in ferrimagnets
-/scholar-megasearch L5 altermagnetism candidate materials    # L5 = grab every source's PDFs
-/scholar-megasearch quick first look at skyrmion racetrack memory
-/scholar-megasearch 전수조사 위상 절연체 표면 상태 측정         # 전수조사 → L5
-/scholar-megasearch MoE routing papers from the last year       # no level → defaults to L2
+/scholar-megasearch depth=4 graph neural networks for molecular property prediction
+/scholar-megasearch L5 CRISPR-Cas9 off-target prediction methods   # L5 = grab every source's PDFs
+/scholar-megasearch quick first look at retrieval-augmented generation
+/scholar-megasearch exhaustive measurement of topological insulator surface states  # → L5
+/scholar-megasearch mixture-of-experts routing papers from the last year   # no level → defaults to L2
 ```
 
 Or run the scripts directly:
@@ -166,8 +169,9 @@ python3 ~/.claude/skills/scholar-megasearch/scripts/fetch_pdfs.py \
 
 One knob scales **breadth** (facets × buckets × hits per query) and **recursion**
 (extra waves) together. Pick a level per run — an explicit `depth=N` / `LN` / bare
-`1–5` wins; otherwise it's inferred from phrasing (`quick`/`빠르게` → L1 …
-`every source`/`전수조사` → L5); otherwise it defaults to **L2**.
+`1–5` wins; otherwise it's inferred from phrasing (`quick` → L1 …
+`every source` / `exhaustive` → L5, including equivalent phrases in other
+languages); otherwise it defaults to **L2**.
 
 | Level | Facets | Buckets | Hits/query | Waves | PDFs | Output |
 |-------|:------:|:-------:|:----------:|-------|:----:|--------|
@@ -175,7 +179,7 @@ One knob scales **breadth** (facets × buckets × hits per query) and **recursio
 | **L2 · Standard** *(default)* | 5 | 5 | 25 | wave 1 only | top 30 | corpus |
 | **L3 · Deep** | 6 | 6 | 30 | + citation snowball | top 50 | corpus |
 | **L4 · Exhaustive** | 8 | 7 (all) | 40 | + snowball + completeness-critic pass | top 100 | corpus + ≥2 shortlist |
-| **L5 · Total** (전수조사) | 8 | 7 (all) | 40 | + snowball + critic loop-until-dry | all sources | corpus + ≥2 shortlist |
+| **L5 · Total** (Exhaustive) | 8 | 7 (all) | 40 | + snowball + critic loop-until-dry | all sources | corpus + ≥2 shortlist |
 
 Each wave is a fan-out followed by a merge into the *same* corpus: the **citation
 snowball** (L3+) seeds the top DOIs/arXiv ids back through citation graphs; the

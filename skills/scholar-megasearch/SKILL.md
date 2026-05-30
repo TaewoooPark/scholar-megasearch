@@ -6,11 +6,12 @@ description: >-
   Semantic Scholar, Crossref, OpenAlex, PubMed/PMC, bioRxiv/medRxiv, DOAJ, CORE,
   BASE, DBLP, IACR, SSRN, Zenodo, Unpaywall, plus web/GitHub — then deduplicates
   by DOI/arXiv-id/title into one ranked corpus and synthesizes it. Use when the
-  user wants a broad/exhaustive literature sweep, a "방대한"/대규모 논문 검색, a
+  user wants a broad/exhaustive literature sweep, a large-scale paper search, a
   systematic review corpus, citation snowballing, or to find as many papers as
-  possible on a topic across many databases at once. Triggers: "논문 방대하게
-  검색", "literature review", "여러 DB에서 다 찾아줘", "systematic search",
-  "메가 검색", "search every source", "전수조사".
+  possible on a topic across many databases at once. Triggers: "massive literature
+  search", "literature review", "search across every database", "systematic search",
+  "mega search", "search every source", "exhaustive search". Localized trigger phrases
+  in other languages map to the same intent.
 ---
 
 # scholar-megasearch
@@ -27,8 +28,8 @@ For the full source list and which tools live in each bucket, read
 ## Workflow
 
 ### 1. Frame the query + pick a depth level
-Restate the topic in one line. If it is underspecified (e.g. "find papers on magnets"),
-ask 1–2 clarifying questions (sub-aspect? time range? methods vs. phenomena?) before
+Restate the topic in one line. If it is underspecified (e.g. "find papers on neural
+networks"), ask 1–2 clarifying questions (sub-aspect? time range? methods vs. phenomena?) before
 fanning out — a vague seed wastes a large fan-out.
 Then pick a **depth level L1–L5** (see `## Depth levels` below): it sets the facet count,
 bucket count, per-source hit cap, and how many waves run. An explicit `depth=N` / `LN` /
@@ -37,7 +38,8 @@ bare `1–5` in the request wins; otherwise infer from phrasing; otherwise defau
 ### 2. Decompose into facets + route to buckets
 - **Facets** (count set by the depth level, 3–8): synonyms, sub-aspects, method vs.
   phenomenon, key authors, and at least one each of a broad and a narrow phrasing. For
-  non-English-friendly topics add a localized query (e.g. Korean) for Bucket G.
+  topics with strong non-English literature, add a localized query in the relevant
+  language for Bucket G.
 - **Buckets** (count set by the depth level, 4–7): pick from the domain→bucket routing
   table in `references/sources.md` based on the topic's field. Default for
   unknown/interdisciplinary: A, B, C, D, E, G.
@@ -111,12 +113,13 @@ else default **L2**. Clamp out-of-range to 1–5, and state the level you ran at
 | **L2 Standard** *(default)* | 5 | 5 | 25 | wave 1 only | top 30 | corpus |
 | **L3 Deep** | 6 | 6 | 30 | + citation-snowball | top 50 | corpus |
 | **L4 Exhaustive** | 8 | 7 (all) | 40 | + snowball + 1 completeness-critic pass | top 100 | corpus + ≥2 shortlist |
-| **L5 Total / 전수조사** | 8 | 7 (all) | 40 | + snowball + critic **loop-until-dry** | all | corpus + ≥2 shortlist |
+| **L5 Total / Exhaustive** | 8 | 7 (all) | 40 | + snowball + critic **loop-until-dry** | all | corpus + ≥2 shortlist |
 
-Phrasing → level when not explicit: 빠르게·quick·맛보기 → L1 · *(no signal)* → L2 ·
-깊게·deep·snowball·인용 추적 → L3 · systematic review·체계적·방대하게·빠짐없이 → L4 ·
-전수조사·전부 다·모조리·every source·끝까지 → L5. Higher levels spawn more subagents and
-cost more tokens (L5 is bounded only by the token budget, not a fixed wave count).
+Phrasing → level when not explicit: quick·first look·taste → L1 · *(no signal)* → L2 ·
+deep·snowball·trace citations → L3 · systematic review·comprehensive·thorough → L4 ·
+exhaustive·every source·all of them·to the end → L5. Equivalent phrases in other
+languages map the same way. Higher levels spawn more subagents and cost more tokens
+(L5 is bounded only by the token budget, not a fixed wave count).
 
 **Waves** — each is a fan-out followed by a `merge_corpus.py` pass into the *same* corpus;
 applies to both the Workflow and Agent paths:
