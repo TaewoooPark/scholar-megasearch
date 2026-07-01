@@ -248,6 +248,7 @@ PDF는 `corpus.json` 랭크 기준 `NN_<slug>.pdf`로 저장되고, `summary.md`
 | E · 오픈액세스 | DOAJ, CORE, BASE, OpenAIRE, Zenodo, Unpaywall, HAL |
 | F · 도메인 특화 | DBLP (CS), IACR (암호), SSRN (경제/법), CiteSeerX |
 | G · 웹 | DuckDuckGo, GitHub, crawl4ai / firecrawl |
+| H · 국내 (선택) | KISTI ScienceON — KCI 등재 논문, 국내 R&D 보고서, 특허 *(자격증명 필요)* |
 
 ### 도메인 → 버킷 라우팅
 
@@ -260,6 +261,15 @@ PDF는 `corpus.json` 랭크 기준 `NN_<slug>.pdf`로 저장되고, `summary.md`
 | 경제 / 사회과학 / 법 | F (SSRN) · B · C | G |
 | 수학 | A · B · C | F |
 | 학제간 / 미상 | A · B · C · D | E · G |
+| 한국어 / 국내 (KCI · R&D · 정책) | H · C · B | E · G |
+
+**버킷 H — KISTI ScienceON**은 선택형 국내(한국어) 소스로, KCI 등재 논문·국내 R&D
+보고서·국내 특허를 다룬다 — 나머지(영미권 중심) 버킷이 남기는 사각지대다.
+`KISTI_CLIENT_ID` / `KISTI_AUTH_KEY` / `KISTI_MAC` 환경변수가 있을 때만 활성화되며(스펙:
+[`references/kisti.md`](./skills/scholar-megasearch/references/kisti.md)), 자격증명이 없으면
+이 버킷을 건너뛴다. 중복제거가 유니코드를 보존하므로 DOI 없는 국내 문헌도 한글 제목으로
+살아남는다. 한국어·국내 동향 질의에 라우팅하고, `KISTI_TARGET=arti,report,patent`로 대상을
+한정한다.
 
 버킷별 전체 도구 목록은
 [`skills/scholar-megasearch/references/sources.md`](./skills/scholar-megasearch/references/sources.md)에,

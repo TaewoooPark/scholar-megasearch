@@ -6,4 +6,8 @@ ddgs==9.10.0
 pdfplumber==0.11.9
 crawl4ai==0.8.0
 pymupdf
+python-dotenv==1.2.2
+# KISTI ScienceON (Bucket H) token flow — kisti_client.py
+pycryptodome==3.23.0
+requests
 chardet==5.2.0

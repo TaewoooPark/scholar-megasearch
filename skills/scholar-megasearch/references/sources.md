@@ -60,6 +60,16 @@ fallback runs.
 skills to scrape a specific page → markdown. `WebSearch`/`WebFetch` as generic fallback.
 `mcp__github__search_repositories` / `search_code` for code/datasets behind a method.
 
+## Bucket H — 국내 / Korean (KISTI ScienceON)
+`scripts/search_local.py kisti "질의"` — KISTI ScienceON OpenAPI를 통해 **국내 한국어
+문헌**을 검색한다. target 3종을 한 번에(기본) 또는 `KISTI_TARGET` 환경변수로 한정:
+- `arti` — KCI 등재 한국어 논문 + 국내 학술지/회의록 (KCI 99% 커버리지)
+- `report` — 국내 R&D 보고서
+- `patent` — 국내 특허
+인증은 환경변수 `KISTI_CLIENT_ID` / `KISTI_AUTH_KEY` / `KISTI_MAC` 필요(`references/kisti.md`).
+영어권 주제에는 중복만 늘므로 **국내 동향·한국어 1차 문헌이 필요할 때만** 라우팅한다.
+구현·필드 매핑: `scripts/kisti_client.py`, 스펙 SSOT: `references/kisti.md`.
+
 ## Domain → bucket routing (pick 4–7 buckets per run)
 
 | Domain of the query | Always | Plus |
@@ -72,6 +82,9 @@ skills to scrape a specific page → markdown. `WebSearch`/`WebFetch` as generic
 | Economics / social science / law | F(SSRN), B, C | G |
 | Math | A, B, C | F |
 | Interdisciplinary / unknown | A, B, C, D | E, G |
+| 국내 동향 / 한국어 문헌 / KCI / 국내 R&D·정책 | H, C, B | E, G |
+
+Bucket H(KISTI)는 한국어 질의에서 가장 강하다 — 한국어 facet을 최소 1개 포함해 fan-out하라.
 
 `unpaywall`/`scihub`/`download_with_fallback` are for **acquisition** (getting the PDF
 of an already-identified paper), not discovery — use them in the optional download phase.

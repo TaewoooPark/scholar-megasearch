@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaData>
+	<resultSummary>
+		<TotalCount>1364</TotalCount>
+		<serviceDatatype>논문</serviceDatatype>
+		<statusCode>200</statusCode>
+	</resultSummary>
+	<parameterData>
+		<client_id>REDACTED</client_id>
+		<token>REDACTED</token>
+		<session_id></session_id>
+		<searchQuery><![CDATA[{"BI": "표면유속"}]]></searchQuery>
+		<sortField></sortField>
+		<sortBy></sortBy>
+		<curPage>1</curPage>
+		<rowCount>5</rowCount>
+	</parameterData>
+	<recordList>
+		<record rownum="1">
+			<item metaCode="CN" metaName="CN"><![CDATA[JAKO200507523360655]]></item>
+			<item metaCode="DBCode" metaName="DB코드"><![CDATA[JAKO]]></item>
+			<item metaCode="JournalId" metaName="저널제어번호"><![CDATA[NJOU00291564]]></item>
+			<item metaCode="Publisher" metaName="출판사(발행기관)"><![CDATA[한국수자원학회]]></item>
+			<item metaCode="JournalName" metaName="저널명"><![CDATA[韓國水資源學會論文集 = Journal of Korea Water Resources Association]]></item>
+			<item metaCode="ISSN" metaName="ISSN"><![CDATA[1226-6280;;]]></item>
+			<item metaCode="ISBN" metaName="ISBN"><![CDATA[]]></item>
+			<item metaCode="VolumeId" metaName="권호Id"><![CDATA[28]]></item>
+			<item metaCode="VolNo1" metaName="권번호"><![CDATA[38]]></item>
+			<item metaCode="VolNo2" metaName="호번호"><![CDATA[11]]></item>
+			<item metaCode="Pubyear" metaName="발행년"><![CDATA[2005]]></item>
+			<item metaCode="Pubdate" metaName="발행일"><![CDATA[20051101]]></item>
+			<item metaCode="Lang" metaName="사용언어"><![CDATA[한국어]]></item>
+			<item metaCode="HoldingFlag" metaName="소장정보유무"><![CDATA[]]></item>
+			<item metaCode="ArticleId" metaName="논문제어번호"><![CDATA[JAKO200507523360655]]></item>
+			<item metaCode="Title" metaName="논문명"><![CDATA[표면유속을 이용한 평균유속 추정방법의 개발]]></item>
+			<item metaCode="Title2" metaName="논문명2"><![CDATA[Estimatation of Mean Velocity from Surface Velocity]]></item>
+			<item metaCode="Abstract" metaName="초록"><![CDATA[LSIV은 표면유속을 측정하는 영상기반 유속측정법중의 하나이다. 이 방법은 기존 측정기법에 비해 측정이 용이할 뿐만 아니라 경제적이기 때문에 유량측정 등의 실제 하천의 유속 측정에 활용하려는 연구들이 시도되고 있다. 그러나 이 기법은 표면유속을 측정하기 때문에 유량 산정을 위해서는 측정된 표면유속을 평균유속으로 환산할 수 있는 방법이 필요하다. 본 연구에서는 하상 및 흐름조건에 대한 다양한 수리실험을 통해 개수로 난류 흐름에 대한 연직유속분포의 특성을 파악하였다. 수리실험결과 수표면 영역의 유속감소를 확인하였으며, 이러한 유속감소는 조도보다는 Froude 수의 영향이 더 큰 것으로 나타났다. 실험 결과를 이용하여 표면유속으로부터 평균유속을 추정하는 두 가지 방법을 제시하였다. 제안된 방법들은 표면유속 보정량을 이용하여 후류법칙의 유속분포를 보정하는 방법과 평균유속과 표면유속의 비를 이용한 방법이다. 제시된 방법들은 실제 하천의 유속 측정 자료들을 이용하여 검증하였다 검증결과 이 방법들은 <TEX>$6\%$</TEX> 이내의 오차를 보이는 것으로 나타났다.]]></item>
+			<item metaCode="Abstract2" metaName="초록2"><![CDATA[LSIV (Large Scale Image Velcocimetry) Is one of the image-based velocity measurement techniques. Since it measures surface velocities, it gives simple and inexpensive way to measure velocity, compared to other methods. Because of these advantages, there have been many studies to apply LSIV to the river discharge measurement in the field. Measuring the discharge by using LSIV requires a method which converts a surface velocity to a mean velocity In the present study, experiments and analysis of vortical velocity profile of open-channel flow in various conditions were performed to develop methods which estimate a mean velocity from a surface velocity. The result of this experiment reveals that velocity-dip phenomena occur at free-surface layer in open channel flow and Froude number affects more than bed roughness does. Two methods for estimating the mean velocity were proposed. One is to correct the wake law's profiles by using the difference of surface velocity from the mean velocity, and the other is to use the ratio of mean and surface velocities. The result of applying these methods in an experiment shows that they are quite accurate having an error of approximately <TEX>$6\%$</TEX> only.]]></item>
+			<item metaCode="Author" metaName="저자"><![CDATA[노영신;윤병만;류권규;]]></item>
+			<item metaCode="Author2" metaName="저자2"><![CDATA[Roh, Young-Sin;Yoon, Byung-Man;Yu, Kwon-Kyu;]]></item>
+			<item metaCode="Affiliation" metaName="저자소속기관"><![CDATA[한국건설기술연구원 수자원연구부;명지대학교 토목환경공학과;명지대학교 토목환경공학과;]]></item>
+			<item metaCode="Affiliation2" metaName="저자소속기관2"><![CDATA[Korea Institute of Construction Technology;Dept. of Civil & Environmental Eng., Myongji Univ.;Dept. of Civil & Environmental Eng., Myongji Univ.;]]></item>
+			<item metaCode="FulltextFlag" metaName="원문유무"><![CDATA[2]]></item>
+			<item metaCode="AbstractFlag" metaName="초록유무"><![CDATA[1]]></item>
+			<item metaCode="PageInfo" metaName="페이지정보"><![CDATA[pp.917-925]]></item>
+			<item metaCode="DOI" metaName="DOI"><![CDATA[https://doi.org/10.3741/jkwra.2005.38.11.917]]></item>
+			<item metaCode="FulltextURL" metaName="원문URL"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIFullTextView?cn=JAKO200507523360655&dbt=JAKO&keyValue=05787966]]></item>
+			<item metaCode="ContentURL" metaName="ScienceON상세링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=NART&cn=JAKO200507523360655]]></item>
+			<item metaCode="MobileURL" metaName="ScienceON모바일링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=NART&cn=JAKO200507523360655&type=mobile]]></item>
+			<item metaCode="Keyword" metaName="키워드"><![CDATA[표면유속 . 평균유속 . 유속감소현상]]></item>
+			<item metaCode="Keyword2" metaName="키워드2"><![CDATA[LSIV . surface velocity . mean velocity . velocity-dip phenomena]]></item>
+			<item metaCode="Degree" metaName="학위구분"><![CDATA[]]></item>
+			<item metaCode="Country" metaName="국가"><![CDATA[]]></item>
+		</record>
+		<record rownum="2">
+			<item metaCode="CN" metaName="CN"><![CDATA[JAKO202530350456301]]></item>
+			<item metaCode="DBCode" metaName="DB코드"><![CDATA[JAKO]]></item>
+			<item metaCode="JournalId" metaName="저널제어번호"><![CDATA[NJOU00568065]]></item>
+			<item metaCode="Publisher" metaName="출판사(발행기관)"><![CDATA[한국수자원학회]]></item>
+			<item metaCode="JournalName" metaName="저널명"><![CDATA[Journal of Korea Water Resources Association = 한국수자원학회논문집]]></item>
+			<item metaCode="ISSN" metaName="ISSN"><![CDATA[2799-8746;2799-8754;]]></item>
+			<item metaCode="ISBN" metaName="ISBN"><![CDATA[]]></item>
+			<item metaCode="VolumeId" metaName="권호Id"><![CDATA[181]]></item>
+			<item metaCode="VolNo1" metaName="권번호"><![CDATA[58]]></item>
+			<item metaCode="VolNo2" metaName="호번호"><![CDATA[9]]></item>
+			<item metaCode="Pubyear" metaName="발행년"><![CDATA[2025]]></item>
+			<item metaCode="Pubdate" metaName="발행일"><![CDATA[20250930]]></item>
+			<item metaCode="Lang" metaName="사용언어"><![CDATA[한국어]]></item>
+			<item metaCode="HoldingFlag" metaName="소장정보유무"><![CDATA[]]></item>
+			<item metaCode="ArticleId" metaName="논문제어번호"><![CDATA[JAKO202530350456301]]></item>
+			<item metaCode="Title" metaName="논문명"><![CDATA[자연하천에서의 표면유속-평균유속 환산계수 산정]]></item>
+			<item metaCode="Title2" metaName="논문명2"><![CDATA[Calculation of surface-mean velocity conversion coefficient in natural rivers]]></item>
+			<item metaCode="Abstract" metaName="초록"><![CDATA[표면유속을 측정하여 유량을 산정하는 경우 수심평균유속에 대한 표면유속의 비율인 환산계수 &#x03B1;를 알아야 한다. 본 연구에서는 다양한 규모 및 특성의 54개 하천의 60개 지점에서 전자파표면유속계를 이용하여 측정된 177개 표면유속 측정자료를 이용하여 &#x03B1;를 산정하였다. 기준유량은 ADCP, 부자 등을 이용하여 측정한 자료와 Rating curve를 이용하여 산정하였다. 그 결과 &#x03B1;는 평균 0.84(0.64~1.02)가 산정되었으며, &#x03B1;의 10번째 및 90번째 백분위수 값은 0.76과 0.94였다. &#x03B1;는 수심이 깊고 유속이 빠를수록 증가하였다. &#x03B1;는 흐름 영역 중 식생 영역의 비율이 증가할수록 감소하였으며, 식생 영역 비율이 50% 이상인 경우 0.75의 값이 산정되었다. 하상 거칠기에 따른 &#x03B1;는 부드러운 하상에서는 0.90, 보통 및 거친 하상에서는 0.85, 매우 거친 하상은 0.80의 값을 제시할 수 있었다. &#x03B1;는 현장특성이 반영되는 계수로서 지점별로 수리특성과 비교한 결과 경향이 뚜렷하였다.]]></item>
+			<item metaCode="Abstract2" metaName="초록2"><![CDATA[For measuring flood discharge by surface flow velocity measurement method, one should know ratio &#x03B1;(conversion coefficient), the depth-averaged to surface velocity. In this paper, &#x03B1; was calculated using 177 surface flow velocity measurement data measured using microwave water surface current meter from 60 stations in 45 rivers of various scale and characteristics. The reference discharge was measured or calculated using ADCP, float and a rating curve. &#x03B1; has a average of 0.84(range: 0.64~1.02), and the 10th and 90th percentile values are 0.76 and 0.94. &#x03B1; increased with deeper water depth and faster velocity. &#x03B1; decreased as the ratio of vegetation area to the flow area increased, and a value of 0.75 was calculated when the ratio of vegetation area was 50% or more. The value of &#x03B1; according to bed roughness was 0.90 for a smooth bed, 0.85 for a normal and rough bed, and 0.80 for a very rough bed. &#x03B1; is a coefficient that reflects filed characteristics, and the trend was clear when comparing the hydraulic characteristics by site.]]></item>
+			<item metaCode="Author" metaName="저자"><![CDATA[이신재;이기성;류영용;이지혜;박석근;]]></item>
+			<item metaCode="Author2" metaName="저자2"><![CDATA[Lee, Sinjae;Lee, Kisung;Ryu, Youngryong;Lee, Jihea;Park, Seokgeun;]]></item>
+			<item metaCode="Affiliation" metaName="저자소속기관"><![CDATA[한국수자원조사기술원 연구개발실;한국수자원조사기술원 금강조사실;인하대학교 공과대학 토목공학과;한국수자원조사기술원 연구개발실;인하대학교 공과대학 토목공학과;]]></item>
+			<item metaCode="Affiliation2" metaName="저자소속기관2"><![CDATA[Research and Development Department, Korea Institute of Hydrological Survey;Gum River Survey Department, Korea Institute of Hydrological Survey;Civil Engineering, Inha University;Research and Development Department, Korea Institute of Hydrological Survey;Civil Engineering, Inha University;]]></item>
+			<item metaCode="FulltextFlag" metaName="원문유무"><![CDATA[2]]></item>
+			<item metaCode="AbstractFlag" metaName="초록유무"><![CDATA[1]]></item>
+			<item metaCode="PageInfo" metaName="페이지정보"><![CDATA[pp.757-769]]></item>
+			<item metaCode="DOI" metaName="DOI"><![CDATA[https://doi.org/10.3741/jkwra.2025.58.9.757]]></item>
+			<item metaCode="FulltextURL" metaName="원문URL"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIFullTextView?cn=JAKO202530350456301&dbt=JAKO&keyValue=05787966]]></item>
+			<item metaCode="ContentURL" metaName="ScienceON상세링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=NART&cn=JAKO202530350456301]]></item>
+			<item metaCode="MobileURL" metaName="ScienceON모바일링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=NART&cn=JAKO202530350456301&type=mobile]]></item>
+			<item metaCode="Keyword" metaName="키워드"><![CDATA[표면유속 . 환산계수 ${ alpha}$ . 수리특성 . 하상 거칠기 . 식생]]></item>
+			<item metaCode="Keyword2" metaName="키워드2"><![CDATA[Surface velocity . Conversion coefficient ${ alpha}$ . Hydraulic characteristics . Bed roughness . vegetation]]></item>
+			<item metaCode="Degree" metaName="학위구분"><![CDATA[]]></item>
+			<item metaCode="Country" metaName="국가"><![CDATA[]]></item>
+		</record>
+		<record rownum="3">
+			<item metaCode="CN" metaName="CN"><![CDATA[JAKO202112362357882]]></item>
+			<item metaCode="DBCode" metaName="DB코드"><![CDATA[JAKO]]></item>
+			<item metaCode="JournalId" metaName="저널제어번호"><![CDATA[NJOU00557356]]></item>
+			<item metaCode="Publisher" metaName="출판사(발행기관)"><![CDATA[응용생태공학회]]></item>
+			<item metaCode="JournalName" metaName="저널명"><![CDATA[Ecology and resilient infrastructure]]></item>
+			<item metaCode="ISSN" metaName="ISSN"><![CDATA[;2288-8527;]]></item>
+			<item metaCode="ISBN" metaName="ISBN"><![CDATA[]]></item>
+			<item metaCode="VolumeId" metaName="권호Id"><![CDATA[27]]></item>
+			<item metaCode="VolNo1" metaName="권번호"><![CDATA[8]]></item>
+			<item metaCode="VolNo2" metaName="호번호"><![CDATA[1]]></item>
+			<item metaCode="Pubyear" metaName="발행년"><![CDATA[2021]]></item>
+			<item metaCode="Pubdate" metaName="발행일"><![CDATA[20210331]]></item>
+			<item metaCode="Lang" metaName="사용언어"><![CDATA[한국어]]></item>
+			<item metaCode="HoldingFlag" metaName="소장정보유무"><![CDATA[]]></item>
+			<item metaCode="ArticleId" metaName="논문제어번호"><![CDATA[JAKO202112362357882]]></item>
+			<item metaCode="Title" metaName="논문명"><![CDATA[드론 정사영상을 이용한 무참조점 표면유속 산정 기법 개발]]></item>
+			<item metaCode="Title2" metaName="논문명2"><![CDATA[Development of Surface Velocity Measurement Technique without Reference Points Using UAV Image]]></item>
+			<item metaCode="Abstract" metaName="초록"><![CDATA[표면영상유속계는 영상을 이용한 비접촉식 유속계로 최근에는 넓은 범위의 유속 및 유량을 간편하게 측정하기 위해 드론을 이용한 표면유속 측정 연구 또한 수행되고 있다. 하지만 드론을 이용한 표면유속 측정 시 영상 변환 및 화소 당 물리거리 산정을 위해 참조점을 영상에 담아야 하기 때문에 드론의 비행 고도와 촬영 영역에 한계를 가지게 된다. 따라서 드론 영상을 이용한 하천 유속 측정의 강점인 공간적 자유성을 최대한 확보하기 위해 참조점이 필요 없는 표면유속 산정 기법의 개발이 필요하다. 따라서 본 연구에서는 드론의 위치 및 드론 장착 카메라의 제원만을 이용한 무참조점 표면유속 산정 기법을 개발하였다. 본 연구에서 개발한 표면유속 산정 기법의 검증을 위해 안동 하천실험센터에서 표면유속을 산정한 뒤 FlowTracker로 측정한 유속, 기존에 표면유속을 산정하는데 사용하던 참조점을 이용하는 표면유속 산정 기법으로 구한 표면유속과 비교하였다. 비교결과 기존 표면유속 산정 기법으로 구한 유속과는 평균적으로 약 4.70%의 차이를 보였으며, FlowTracker로 측정한 유속과는 평균적으로 약 4.60%의 차이를 보이는 것을 확인하였다. 향후 본 연구에서 개발한 기법을 이용하면 비행고도와 촬영 영역, 분석 영역에 구애받지 않고 효과적으로 드론을 이용하여 표면유속을 측정할 수 있을 것으로 기대한다.]]></item>
+			<item metaCode="Abstract2" metaName="초록2"><![CDATA[Surface image velocimetry (SIV) is a noncontact velocimetry technique based on images. Recently, studies have been conducted on surface velocity measurements using drones to measure a wide range of velocities and discharges. However, when measuring the surface velocity using a drone, reference points must be included in the image for image correction and the calculation of the ground sample distance, which limits the flight altitude and shooting area of the drone. A technique for calculating the surface velocity that does not require reference points must be developed to maximize spatial freedom, which is the advantage of velocity measurements using drone images. In this study, a technique for calculating the surface velocity that uses only the drone position and the specifications of the drone-mounted camera, without reference points, was developed. To verify the developed surface velocity calculation technique, surface velocities were calculated at the Andong River Experiment Center and then measured with a FlowTracker. The surface velocities measured by conventional SIV using reference points and those calculated by the developed SIV method without reference points were compared. The results confirmed an average difference of approximately 4.70% from the velocity obtained by the conventional SIV and approximately 4.60% from the velocity measured by FlowTracker. The proposed technique can accurately measure the surface velocity using a drone regardless of the flight altitude, shooting area, and analysis area.]]></item>
+			<item metaCode="Author" metaName="저자"><![CDATA[이준형;윤병만;김서준;]]></item>
+			<item metaCode="Author2" metaName="저자2"><![CDATA[Lee, Jun Hyeong;Yoon, Byung Man;Kim, Seo Jun;]]></item>
+			<item metaCode="Affiliation" metaName="저자소속기관"><![CDATA[명지대학교 토목환경공학과;명지대학교 토목환경공학과;주식회사 하이드로셈;]]></item>
+			<item metaCode="Affiliation2" metaName="저자소속기관2"><![CDATA[Department of Civil and Environmental Engineering, Myongji University;Department of Civil and Environmental Engineering, Myongji University;Corp. HydroSEM;]]></item>
+			<item metaCode="FulltextFlag" metaName="원문유무"><![CDATA[2]]></item>
+			<item metaCode="AbstractFlag" metaName="초록유무"><![CDATA[1]]></item>
+			<item metaCode="PageInfo" metaName="페이지정보"><![CDATA[pp.22-31]]></item>
+			<item metaCode="DOI" metaName="DOI"><![CDATA[https://doi.org/10.17820/eri.2021.8.1.022]]></item>
+			<item metaCode="FulltextURL" metaName="원문URL"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIFullTextView?cn=JAKO202112362357882&dbt=JAKO&keyValue=05787966]]></item>
+			<item metaCode="ContentURL" metaName="ScienceON상세링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=NART&cn=JAKO202112362357882]]></item>
+			<item metaCode="MobileURL" metaName="ScienceON모바일링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=NART&cn=JAKO202112362357882&type=mobile]]></item>
+			<item metaCode="Keyword" metaName="키워드"><![CDATA[드론 . 표면영상유속계 . 표면유속 . 무참조점]]></item>
+			<item metaCode="Keyword2" metaName="키워드2"><![CDATA[Drone . SIV . Surface velocity . Without reference points]]></item>
+			<item metaCode="Degree" metaName="학위구분"><![CDATA[]]></item>
+			<item metaCode="Country" metaName="국가"><![CDATA[]]></item>
+		</record>
+		<record rownum="4">
+			<item metaCode="CN" metaName="CN"><![CDATA[JAKO200411922294653]]></item>
+			<item metaCode="DBCode" metaName="DB코드"><![CDATA[JAKO]]></item>
+			<item metaCode="JournalId" metaName="저널제어번호"><![CDATA[NJOU00291564]]></item>
+			<item metaCode="Publisher" metaName="출판사(발행기관)"><![CDATA[한국수자원학회]]></item>
+			<item metaCode="JournalName" metaName="저널명"><![CDATA[韓國水資源學會論文集 = Journal of Korea Water Resources Association]]></item>
+			<item metaCode="ISSN" metaName="ISSN"><![CDATA[1226-6280;;]]></item>
+			<item metaCode="ISBN" metaName="ISBN"><![CDATA[]]></item>
+			<item metaCode="VolumeId" metaName="권호Id"><![CDATA[7]]></item>
+			<item metaCode="VolNo1" metaName="권번호"><![CDATA[37]]></item>
+			<item metaCode="VolNo2" metaName="호번호"><![CDATA[2]]></item>
+			<item metaCode="Pubyear" metaName="발행년"><![CDATA[2004]]></item>
+			<item metaCode="Pubdate" metaName="발행일"><![CDATA[20040201]]></item>
+			<item metaCode="Lang" metaName="사용언어"><![CDATA[한국어]]></item>
+			<item metaCode="HoldingFlag" metaName="소장정보유무"><![CDATA[]]></item>
+			<item metaCode="ArticleId" metaName="논문제어번호"><![CDATA[JAKO200411922294653]]></item>
+			<item metaCode="Title" metaName="논문명"><![CDATA[LSPIV를 이용한 표면유속 측정기법의 검증 및 적용]]></item>
+			<item metaCode="Title2" metaName="논문명2"><![CDATA[Verification and Application of Surface-Velocity Measurement Method Using LSPIV]]></item>
+			<item metaCode="Abstract" metaName="초록"><![CDATA[본 연구에서는 LSPIV기법의 효율성과 적용성을 검증하기 위해 유속검정용 전동기계를 이용한 검증실험을 통하여 LSPIV기법을 검증하였다. 검증을 실시한 후에 LSPIV기법을 실제하천에 적용하였다 대상하천으로는 경안천의 지류인 능원천과 곤지암천을 선택하였으며, 3차원 유속계 및 기존의 표면유속 측정에 사용해 왔던 전자파 표면유속계의 측정결과와 비교하였다. 본 연구를 통해 나타난 결과를 살펴보면 검증실험에 사용된 전동차의 결과값과 비교했을 때 LSPIV기법의 측정값은 5％이내의 오차로 잘 일치하는 경향을 나타냈으며, 실제하천에 적용하여 기존의 측정장치와 비교하였을 때에도 최대 8％ 이내의 오차로 잘 일치하였다.]]></item>
+			<item metaCode="Abstract2" metaName="초록2"><![CDATA[The purpose of this study is to verify LSPIV technique. Verification was made using moving cart with known velocity. The difference of velocity values obtained using these methods are within 5％, which means that LSPIV can be used in the field with reasonable accuracy After verification, LSPIV was applied to the river. The Neungwon stream and the Gonjiam stream, tributaries of the Kyungan stream, were selected as the test sites for application. The results of the test application were compared with those obtained by 3-D electromagnetic current meter and electron-wave surface velocity meter. Results show that the velocity values obtained using LSPIV coincide well with those obtained using conventional devices with maximum difference of 8％.]]></item>
+			<item metaCode="Author" metaName="저자"><![CDATA[김영근;노영신;윤병만;]]></item>
+			<item metaCode="Author2" metaName="저자2"><![CDATA[Kim, Young-Geun;Roh, Young-Sin;Yoon, Byung-Man;]]></item>
+			<item metaCode="Affiliation" metaName="저자소속기관"><![CDATA[명지대학교 토목ㆍ환경공학과;명지대학교 토목ㆍ환경공학과;명지대학교 토목ㆍ환경공학과;]]></item>
+			<item metaCode="Affiliation2" metaName="저자소속기관2"><![CDATA[]]></item>
+			<item metaCode="FulltextFlag" metaName="원문유무"><![CDATA[2]]></item>
+			<item metaCode="AbstractFlag" metaName="초록유무"><![CDATA[1]]></item>
+			<item metaCode="PageInfo" metaName="페이지정보"><![CDATA[pp.155-161]]></item>
+			<item metaCode="DOI" metaName="DOI"><![CDATA[https://doi.org/10.3741/jkwra.2004.37.2.155]]></item>
+			<item metaCode="FulltextURL" metaName="원문URL"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIFullTextView?cn=JAKO200411922294653&dbt=JAKO&keyValue=05787966]]></item>
+			<item metaCode="ContentURL" metaName="ScienceON상세링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=NART&cn=JAKO200411922294653]]></item>
+			<item metaCode="MobileURL" metaName="ScienceON모바일링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=NART&cn=JAKO200411922294653&type=mobile]]></item>
+			<item metaCode="Keyword" metaName="키워드"><![CDATA[표면유속]]></item>
+			<item metaCode="Keyword2" metaName="키워드2"><![CDATA[LSPIV . surface velocity]]></item>
+			<item metaCode="Degree" metaName="학위구분"><![CDATA[]]></item>
+			<item metaCode="Country" metaName="국가"><![CDATA[]]></item>
+		</record>
+		<record rownum="5">
+			<item metaCode="CN" metaName="CN"><![CDATA[DIKO0014465727]]></item>
+			<item metaCode="DBCode" metaName="DB코드"><![CDATA[DIKO]]></item>
+			<item metaCode="JournalId" metaName="저널제어번호"><![CDATA[]]></item>
+			<item metaCode="Publisher" metaName="출판사(발행기관)"><![CDATA[동의대학교대학원]]></item>
+			<item metaCode="JournalName" metaName="저널명"><![CDATA[]]></item>
+			<item metaCode="ISSN" metaName="ISSN"><![CDATA[]]></item>
+			<item metaCode="ISBN" metaName="ISBN"><![CDATA[]]></item>
+			<item metaCode="VolumeId" metaName="권호Id"><![CDATA[]]></item>
+			<item metaCode="VolNo1" metaName="권번호"><![CDATA[]]></item>
+			<item metaCode="VolNo2" metaName="호번호"><![CDATA[]]></item>
+			<item metaCode="Pubyear" metaName="발행년"><![CDATA[2016]]></item>
+			<item metaCode="Pubdate" metaName="발행일"><![CDATA[]]></item>
+			<item metaCode="Lang" metaName="사용언어"><![CDATA[한국어]]></item>
+			<item metaCode="HoldingFlag" metaName="소장정보유무"><![CDATA[]]></item>
+			<item metaCode="ArticleId" metaName="논문제어번호"><![CDATA[DIKO0014465727]]></item>
+			<item metaCode="Title" metaName="논문명"><![CDATA[드론 기반 표면영상유속계를 이용한 하천의 표면유속 측정]]></item>
+			<item metaCode="Title2" metaName="논문명2"><![CDATA[]]></item>
+			<item metaCode="Abstract" metaName="초록"><![CDATA[본 연구의 목적은 드론과 표면영상유속계를 이용하여 하천의 표면유속을 측정하는 것이다. 드론에 장착된 카메라로 하천 수표면을 촬영하여 하천의 표면유속을 측정하는 방법을 개발하는 것이다. 드론의 가장 큰 장점은 사람이 접근하기 힘든 지역도 쉽게 촬영이 가능하는 것이다. 이러한 장점을 이용하여 원하는 하천 표면의 영상을 쉽게 촬영할 수 있다. 일반적으로 시중에 판매되는 드론은 대부분 비디오 카메라가 장착되어 있다. 비디오 카메라는 야간에 촬영이 어려우며, 아무리 정지비행을 잘 하더라도 영상에는 흔들림이 필연적으로 존재한다. 이를 극복하기 위하여 본 연구에서는 열영상 카메라를 추가적으로 장착하여, 야간에도 표면유속측정을 위한 영상 촬영이 가능하도록 하였다. 그리고 흔들린 영상에 대해서는 형태 정합법에 의해 보정을 하였다. 영상 보정 과정은 고정된 표정점을 영상에서 추적한 뒤, 기준 영상의 표정점과 보정 영상의 표정점이 일치하도록 보정하였다. 영상 보정 후 영상 처리와 분석프로그램을 통하여 유속을 도출한다. 실험 하천에 대해 적용한 결과 상당히 만족스런 결과를 얻었다. 강우나 강풍과 같은 자연적인 조건과 드론 배터리, 방수 등의 기계적인 조건 등 여러 가지 변수로 작용하는 부분에 대하여 보완을 충분히 한다면, 실제 하천현장에서도 충분히 표면영상유속측정이 가능할 것으로 기대된다.]]></item>
+			<item metaCode="Abstract2" metaName="초록2"><![CDATA[]]></item>
+			<item metaCode="Author" metaName="저자"><![CDATA[황정근]]></item>
+			<item metaCode="Author2" metaName="저자2"><![CDATA[]]></item>
+			<item metaCode="Affiliation" metaName="저자소속기관"><![CDATA[동의대학교대학원]]></item>
+			<item metaCode="Affiliation2" metaName="저자소속기관2"><![CDATA[]]></item>
+			<item metaCode="FulltextFlag" metaName="원문유무"><![CDATA[0]]></item>
+			<item metaCode="AbstractFlag" metaName="초록유무"><![CDATA[0]]></item>
+			<item metaCode="PageInfo" metaName="페이지정보"><![CDATA[]]></item>
+			<item metaCode="DOI" metaName="DOI"><![CDATA[]]></item>
+			<item metaCode="FulltextURL" metaName="원문URL"><![CDATA[]]></item>
+			<item metaCode="ContentURL" metaName="ScienceON상세링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=DIKO&cn=DIKO0014465727]]></item>
+			<item metaCode="MobileURL" metaName="ScienceON모바일링크"><![CDATA[]]></item>
+			<item metaCode="Keyword" metaName="키워드"><![CDATA[]]></item>
+			<item metaCode="Keyword2" metaName="키워드2"><![CDATA[]]></item>
+			<item metaCode="Degree" metaName="학위구분"><![CDATA[국내석사]]></item>
+			<item metaCode="Country" metaName="국가"><![CDATA[]]></item>
+		</record>
+	</recordList>
+</MetaData>

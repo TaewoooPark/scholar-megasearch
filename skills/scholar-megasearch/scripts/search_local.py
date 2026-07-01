@@ -5,7 +5,7 @@ Run with the host venv interpreter:
     ~/.claude/skill_venv/bin/python3 search_local.py SOURCE "query" [-n 30] [-o out.json]
     ${CODEX_HOME:-~/.codex}/skill_venv/bin/python3 search_local.py SOURCE "query" [-n 30] [-o out.json]
 
-SOURCE is one of: arxiv | semanticscholar | ddg
+SOURCE is one of: arxiv | semanticscholar | ddg | kisti
 Emits a JSON list of records in the corpus schema (title, authors, year, doi,
 arxiv_id, pdf_url, url, citations, abstract, source, query) to stdout or -o.
 
@@ -78,7 +78,31 @@ def search_ddg(query, n):
     return out
 
 
-DISPATCH = {"arxiv": search_arxiv, "semanticscholar": search_semanticscholar, "ddg": search_ddg}
+def search_kisti(query, n):
+    """국내 KISTI ScienceON 검색 (논문·보고서·특허). KISTI_TARGET 환경변수로 대상 한정 가능.
+
+    Requires KISTI_CLIENT_ID / KISTI_AUTH_KEY / KISTI_MAC (see references/kisti.md).
+    """
+    import os
+    import sys
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import kisti_client as kc
+    fns = {"arti": kc.search_arti, "report": kc.search_report, "patent": kc.search_patent}
+    raw_targets = os.environ.get("KISTI_TARGET", "arti,report,patent")
+    chosen = [t.strip() for t in raw_targets.split(",") if t.strip() in fns]
+    if not chosen:  # typo'd KISTI_TARGET -> warn and fall back to all targets
+        print(f"[kisti] KISTI_TARGET={raw_targets!r} has no valid target; using all",
+              file=sys.stderr)
+        chosen = list(fns)
+    per = max(1, n // max(1, len(chosen)))
+    out = []
+    for t in chosen:
+        out += fns[t](query, per)
+    return out
+
+
+DISPATCH = {"arxiv": search_arxiv, "semanticscholar": search_semanticscholar,
+            "ddg": search_ddg, "kisti": search_kisti}
 
 
 def main():

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaData>
+	<resultSummary>
+		<TotalCount>828</TotalCount>
+		<serviceDatatype>특허</serviceDatatype>
+		<statusCode>200</statusCode>
+	</resultSummary>
+	<parameterData>
+		<client_id>REDACTED</client_id>
+		<token>REDACTED</token>
+		<session_id></session_id>
+		<searchQuery><![CDATA[{"BI": "표면유속"}]]></searchQuery>
+		<sortField></sortField>
+		<sortBy></sortBy>
+		<curPage>1</curPage>
+		<rowCount>5</rowCount>
+	</parameterData>
+	<recordList>
+		<record rownum="1">
+			<item metaCode="CN" metaName="CN"><![CDATA[KOR1019960002393]]></item>
+			<item metaCode="DBCode" metaName="DB코드"><![CDATA[KPTN]]></item>
+			<item metaCode="Title" metaName="특허제목"><![CDATA[전자파 표면 유속계]]></item>
+			<item metaCode="Abstract" metaName="초록"><![CDATA[본 발명을 통하여 개발된 전자파 하천수 표면 유속계는 자연 하천에 설치되어 있는 교량등의 구조물을 이용하여 전자파를 유체의 표면에 발사한 후, 반사 수신된 신호로써 도플러 효과에 의한 주파수를 산출하고, 이로부터 하천수의 표면 유속을 환산하는 원리를 사용하는 계측장비이다. 하천의 유속을 측정하기 위해서는 유속계를 유체속에  넣어 측정하는 것이 일반적이나, 홍수 발생시 이와 같은 방법의 유속 측정은 많은 어려움과 위험이 뒤따르고, 고가인 유속계의 파손 원인이 되기도 한다. 따라서, 본 전자파 하천수 표면 유속계는 센서를 유체 속에 넣지 않고 표면 유속을 측정할 수 있다는 점 때문에 홍수 시, 급류의 유속측정에 매우 유용하다. 본 전자파 하천수 표면 유속계가 속한 기술 분야는 전자 공학, 컴퓨터 공학, 토목 공학 분야을 응용한 계측 장비 개발 분야라 할 수 있으며, 속도 측정 원리로서 도플러 효과 레이다 이론이 이용되었다. 본 전자파 하천수 표면 유속계는 전파를 공간상으로 보내고, 산란된 신호를 수신하여 도플러 주파수를 얻는 1)초고주파(RF:Radio Frequency)부분과, 초고주파 부분에서 얻은 도플러 신호를 증폭하고, 고속 후리에 변환(FFT:Fast Furier Transform)에 의해 주파수를 신속하게 계산한 뒤 이를 속도로 바꾸어 주는 2)신호 처리 부분으로 크게 구성되었다. 이와 함께, 본 전자파 하천수 표면 유속계의 개발에 부속되어 간이 설비를 제작하였다. 일반적으로 유속계의 검정은 대형 선형수조와 홀차가 설치되어 있는 대규모 시험실에서만 가능한 관계로 많은 노력 및 시간과 경비가 요구되었다. 이러한 제약 조건들에 대한 개선 목적으로 본 간이 검정 설비가 제작 되었고, 이에 따라, 장소의 제약 없이 용이하게 전자파 하천수 표면 유속계의 검정이 가능하게 되었다.]]></item>
+			<item metaCode="Nation" metaName="국가"><![CDATA[ko]]></item>
+			<item metaCode="NationCode" metaName="국가코드"><![CDATA[한국(KO)]]></item>
+			<item metaCode="PatentStatus" metaName="특허상태"><![CDATA[등록]]></item>
+			<item metaCode="IPC" metaName="IPC분류"><![CDATA[G01F-001/56;G01P-005/00;]]></item>
+			<item metaCode="Applicants" metaName="출원인"><![CDATA[한국수자원공사]]></item>
+			<item metaCode="ApplDate" metaName="출원일자"><![CDATA[19960201]]></item>
+			<item metaCode="ApplNum" metaName="출원번호"><![CDATA[10-1996-0002393]]></item>
+			<item metaCode="PublDate" metaName="공개일자"><![CDATA[19970912]]></item>
+			<item metaCode="PublNum" metaName="공개번호"><![CDATA[10-1997-0062659]]></item>
+			<item metaCode="GrantDate" metaName="등록일자"><![CDATA[19990331]]></item>
+			<item metaCode="GrantNum" metaName="등록번호"><![CDATA[10-0204980-0000]]></item>
+			<item metaCode="NoticeDate" metaName="공고일자"><![CDATA[19990615]]></item>
+			<item metaCode="NoticeNumber" metaName="공고번호"><![CDATA[20080509]]></item>
+			<item metaCode="ContentURL" metaName="ScienceON상세링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=KPTN&cn=KOR1019960002393]]></item>
+		</record>
+		<record rownum="2">
+			<item metaCode="CN" metaName="CN"><![CDATA[KOR1020150186700]]></item>
+			<item metaCode="DBCode" metaName="DB코드"><![CDATA[KPTN]]></item>
+			<item metaCode="Title" metaName="특허제목"><![CDATA[전자파 표면 유속계의 하천 유속 측정 범위 결정 기법]]></item>
+			<item metaCode="Abstract" metaName="초록"><![CDATA[본 발명은 전자파 표면 유속계를 이용한 하천 유속 측정에 관한 것으로 더욱 상세하게는 전자파를 이용한 하천 유속 측정에 있어서 측정 범위를 정량적인 좌표를 제시할 수 있도록 함으로써 전자파 표면 유속계를 이용한 유속 측정에 있어 측점 위치 결정의 정확성 및 편의성을 높일 수 있도록 함은 물론 전자파 표면 유속계의 유속 측정 결과의 정확도를 크게 향상시킬 수 있는 전자파 표면 유속계의 하천 유속 측정 범위 결정 기법에 관한 것으로서, 안테나가 형성된 전자파 표면 유속계를 이용하여 수표면의 유속을 측정하는 방법에 있어서, 상기 안테나의 각각의 꼭짓점 좌표를 산정하는 제1 단계; 상기 각각의 꼭짓점으로부터 상기 수표면을 향하는 각각의 전자파의 방향벡터를 산정하는 제2 단계; 상기 각각의 방향벡터가 상기 수표면과 만나는 각각의 직선의 방정식을 산정하는 제3 단계; 상기 직선의 방정식을 통해 상기 안테나의 각각의 꼭짓점으로부터 상기 수표면에 투영되는 각각의 투영 꼭짓점을 산정하고, 상기 투영 꼭짓점을 이용하여 상기 안테나로부터 발생된 전자파가 상기 수표면에 실제 투영된 면적을 최종 산정하는 제4 단계; 를 포함하는 전자파 표면 유속계의 하천 유속 측정 범위 결정 방법을 제공을 함으로써, 전자파 표면 유속계의 유속 측정 결과에 대한 공간적 측정 범위를 실제 좌표로 제시 가능함으로 측정자의 편의성을 향상시킬 수 있을 뿐만 아니라 유속 측정 결과에 대한 신뢰도를 크게 향상시키는 효과가 있다.]]></item>
+			<item metaCode="Nation" metaName="국가"><![CDATA[ko]]></item>
+			<item metaCode="NationCode" metaName="국가코드"><![CDATA[한국(KO)]]></item>
+			<item metaCode="PatentStatus" metaName="특허상태"><![CDATA[등록]]></item>
+			<item metaCode="IPC" metaName="IPC분류"><![CDATA[G01P-005/00;G01C-013/00;]]></item>
+			<item metaCode="Applicants" metaName="출원인"><![CDATA[단국대학교 산학협력단]]></item>
+			<item metaCode="ApplDate" metaName="출원일자"><![CDATA[20151224]]></item>
+			<item metaCode="ApplNum" metaName="출원번호"><![CDATA[10-2015-0186700]]></item>
+			<item metaCode="PublDate" metaName="공개일자"><![CDATA[20170705]]></item>
+			<item metaCode="PublNum" metaName="공개번호"><![CDATA[10-2017-0076954]]></item>
+			<item metaCode="GrantDate" metaName="등록일자"><![CDATA[20180405]]></item>
+			<item metaCode="GrantNum" metaName="등록번호"><![CDATA[10-1848129-0000]]></item>
+			<item metaCode="NoticeDate" metaName="공고일자"><![CDATA[20180412]]></item>
+			<item metaCode="NoticeNumber" metaName="공고번호"><![CDATA[20170706]]></item>
+			<item metaCode="ContentURL" metaName="ScienceON상세링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=KPTN&cn=KOR1020150186700]]></item>
+		</record>
+		<record rownum="3">
+			<item metaCode="CN" metaName="CN"><![CDATA[KOR1020100089890]]></item>
+			<item metaCode="DBCode" metaName="DB코드"><![CDATA[KUPA]]></item>
+			<item metaCode="Title" metaName="특허제목"><![CDATA[편각 측정용 전자파 표면 유속계]]></item>
+			<item metaCode="Abstract" metaName="초록"><![CDATA[본 발명은 편각 측정용 전자파 표면 유속계에 관한 것으로, 더욱 상세하게는 물이 흐르는 방향과 나란한 지점에서의 표면 유속 측정은 물론 상기 지점에서 편각이 발생하는 위치의 표면 유속의 측정도 가능하도록 한 것을 특징으로 하는 편각 측정용 전자파 표면 유속계에 관한 것이다.즉, 전자파를 송신 및 수신하는 안테나와; 상기 안테나를 통해 송수신되는 전자파가 생성 및 처리되는 본체와; 상기 안테나의 고정각도를 검출하여 수면으로 발사하는 전자파의 발사각도를 측정하는 측각부와; 상기 안테나, 본체, 측각부를 지지하는 삼각대와; 상기 안테나에서 얻어진 전자파를 이용하여 표면 유속값으로 환산하여 이를 표시 및 저장하는 신호처리 및 제어부와; 전원을 공급하는 전원부; 로 이루어지는 전자파 표면 유속계에 있어서, 상기 본체의 내부에는, 저주파 대역의 주파수가 변조된 전자파를 출력하는 전압제어발진기와; 상기 전압제어발진기를 통해 출력되는 송신파의 주파수 레벨을 조절하는 감쇄기와; 상기 송신파를 고출력으로 증폭시켜 안테나로 전달하는 고출력증폭기와; 상기 안테나를 통해 수신되는 수신파를 상기 전압제어발진기로부터 격리기를 통해 제공되는 송신파와 혼합하여 노이즈를 제거하는 혼합기와; 상기 혼합기를 통해 노이즈가 제거된 수신파를 증폭시키는 중간주파수증폭기;가 포함되는 편각측정용 전자파 표면 유속계를 특징으로 한다.]]></item>
+			<item metaCode="Nation" metaName="국가"><![CDATA[ko]]></item>
+			<item metaCode="NationCode" metaName="국가코드"><![CDATA[한국(KO)]]></item>
+			<item metaCode="PatentStatus" metaName="특허상태"><![CDATA[공개]]></item>
+			<item metaCode="IPC" metaName="IPC분류"><![CDATA[G01P-005/24;G01P-005/00;]]></item>
+			<item metaCode="Applicants" metaName="출원인"><![CDATA[한국수자원공사]]></item>
+			<item metaCode="ApplDate" metaName="출원일자"><![CDATA[20100914]]></item>
+			<item metaCode="ApplNum" metaName="출원번호"><![CDATA[10-2010-0089890]]></item>
+			<item metaCode="PublDate" metaName="공개일자"><![CDATA[20120322]]></item>
+			<item metaCode="PublNum" metaName="공개번호"><![CDATA[10-2012-0027974]]></item>
+			<item metaCode="GrantDate" metaName="등록일자"><![CDATA[]]></item>
+			<item metaCode="GrantNum" metaName="등록번호"><![CDATA[]]></item>
+			<item metaCode="NoticeDate" metaName="공고일자"><![CDATA[]]></item>
+			<item metaCode="NoticeNumber" metaName="공고번호"><![CDATA[20120330]]></item>
+			<item metaCode="ContentURL" metaName="ScienceON상세링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=KUPA&cn=KOR1020100089890]]></item>
+		</record>
+		<record rownum="4">
+			<item metaCode="CN" metaName="CN"><![CDATA[KOR1020250012322]]></item>
+			<item metaCode="DBCode" metaName="DB코드"><![CDATA[KUPA]]></item>
+			<item metaCode="Title" metaName="특허제목"><![CDATA[하천 표면 영상을 활용한 하천 표면 유속 측정 장치]]></item>
+			<item metaCode="Abstract" metaName="초록"><![CDATA[본 발명은 하천 표면 영상을 활용한 하천 표면 유속 측정 장치에 관한 것으로, 해결하고자 하는 과제는 카메라로부터 수집된 하천표면영상에 대한 옵티컬 플로우(Optical flow) 처리를 통해 영상 내 검출 입자들의 속도를 산출하고, 이를 실제 물리적인 유속으로 환산하여 유속 측정의 효율성 및 정확성을 높이는데 있다.일례로, 미리 설정된 월드좌표계를 이용하여 하천표면영상의 관측지점 좌표값을 계산하고 상기 호모그래피 계산부로 제공하는 관측지점 계산부; 하천표면영상의 관심영역을 설정하고, 설정된 관심영역으로 이루어지는 평면의 점과 하천표면영상이 촬영된 하천표면영역에 해당되는 평면의 점 간을 맵핑하는 변환 과정인 호모그래피(Homography)를 계산하는 호모그래피 계산부; OpenCV 라이브러리를 이용하여 하천표면영상으로부터 영상분석을 위한 프레임을 추출하는 프레임 추출부; 및 OpenCV 라이브러리를 이용하여 각 프레임 별로 하천표면영상의 다수의 특징 값을 추출하고, 연속되는 프레임 간에 특징 값들을 추적하여 옵티컬 플로우(Optical flow)를 계산하고, 계산된 옵티컬 플로우, 프레임의 시간정보 및 계산된 호모그래피를 기반으로 제1 하천표면유속을 계산하는 유속 계산부를 포함하는 하천 표면 영상을 활용한 하천 표면 유속 측정 장치를 개시한다.]]></item>
+			<item metaCode="Nation" metaName="국가"><![CDATA[ko]]></item>
+			<item metaCode="NationCode" metaName="국가코드"><![CDATA[한국(KO)]]></item>
+			<item metaCode="PatentStatus" metaName="특허상태"><![CDATA[공개]]></item>
+			<item metaCode="IPC" metaName="IPC분류"><![CDATA[G01P-005/20;G06T-003/06;G06T-003/4007;G06T-005/20;G06T-007/246;G06T-007/73;]]></item>
+			<item metaCode="Applicants" metaName="출원인"><![CDATA[주식회사 대호이엔지;만승엔지니어링 주식회사;주식회사 기림;]]></item>
+			<item metaCode="ApplDate" metaName="출원일자"><![CDATA[20250131]]></item>
+			<item metaCode="ApplNum" metaName="출원번호"><![CDATA[10-2025-0012322]]></item>
+			<item metaCode="PublDate" metaName="공개일자"><![CDATA[20250804]]></item>
+			<item metaCode="PublNum" metaName="공개번호"><![CDATA[10-2025-0117320]]></item>
+			<item metaCode="GrantDate" metaName="등록일자"><![CDATA[]]></item>
+			<item metaCode="GrantNum" metaName="등록번호"><![CDATA[]]></item>
+			<item metaCode="NoticeDate" metaName="공고일자"><![CDATA[]]></item>
+			<item metaCode="NoticeNumber" metaName="공고번호"><![CDATA[20250807]]></item>
+			<item metaCode="ContentURL" metaName="ScienceON상세링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=KUPA&cn=KOR1020250012322]]></item>
+		</record>
+		<record rownum="5">
+			<item metaCode="CN" metaName="CN"><![CDATA[KOR1020060070772]]></item>
+			<item metaCode="DBCode" metaName="DB코드"><![CDATA[KPTN]]></item>
+			<item metaCode="Title" metaName="특허제목"><![CDATA[표면 영상 분석에 의한 하천의 표면 유속 측정 방법]]></item>
+			<item metaCode="Abstract" metaName="초록"><![CDATA[본 발명은 비디오 카메라나 디지털 카메라에 의해 하천이나 수로에서 연속적으로 획득한 두 장의 영상을 컴퓨터 프로그램 (LSIV| Large Scale Image Velocimetry)을 이용하여 분석하여 하천이나 수로의 표면 유속을 측정하는 비접촉식 표면 유속 측정 방법에 대한 것이다. 본 발명에 의한 표면 유속 측정 방법은 크게 1) 비디오 카메라나 디지털 카메라를 이용한 영상의 획득 단계, 2) 획득된 영상의 변환 단계, 및 3) 영상의 분석에 의한 하천이나 수로의 표면 유속을 측정하는 단계를 포함하고 있다.  기존의 프로펠러 유속계, 컵형 유속계, 전자 유속계 등이 하천이나 수로에 유속계를 직접 투입하여 측정하는 방식인데 비하여, 본 발명은 하천이나 수로의 수면 영상을 분석하여 표면 유속을 측정하기 때문에 비접촉식으로 유속을 측정하며, 또한 한 지점의 유속이 아닌 영상에 나타난 측정면 전체의 유속 분포를 한꺼번에 측정하는 특징을 지니고 있다.]]></item>
+			<item metaCode="Nation" metaName="국가"><![CDATA[ko]]></item>
+			<item metaCode="NationCode" metaName="국가코드"><![CDATA[한국(KO)]]></item>
+			<item metaCode="PatentStatus" metaName="특허상태"><![CDATA[등록]]></item>
+			<item metaCode="IPC" metaName="IPC분류"><![CDATA[G01P-005/00]]></item>
+			<item metaCode="Applicants" metaName="출원인"><![CDATA[명지대학교 산학협력단]]></item>
+			<item metaCode="ApplDate" metaName="출원일자"><![CDATA[20060727]]></item>
+			<item metaCode="ApplNum" metaName="출원번호"><![CDATA[10-2006-0070772]]></item>
+			<item metaCode="PublDate" metaName="공개일자"><![CDATA[20080131]]></item>
+			<item metaCode="PublNum" metaName="공개번호"><![CDATA[10-2008-0010579]]></item>
+			<item metaCode="GrantDate" metaName="등록일자"><![CDATA[20080324]]></item>
+			<item metaCode="GrantNum" metaName="등록번호"><![CDATA[10-0817907-0000]]></item>
+			<item metaCode="NoticeDate" metaName="공고일자"><![CDATA[20080331]]></item>
+			<item metaCode="NoticeNumber" metaName="공고번호"><![CDATA[20080509]]></item>
+			<item metaCode="ContentURL" metaName="ScienceON상세링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=KPTN&cn=KOR1020060070772]]></item>
+		</record>
+	</recordList>
+</MetaData>

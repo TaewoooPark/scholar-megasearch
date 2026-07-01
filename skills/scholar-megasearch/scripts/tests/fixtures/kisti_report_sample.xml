@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaData>
+	<resultSummary>
+		<TotalCount>411</TotalCount>
+		<serviceDatatype>보고서</serviceDatatype>
+		<statusCode>200</statusCode>
+	</resultSummary>
+	<parameterData>
+		<client_id>REDACTED</client_id>
+		<token>REDACTED</token>
+		<session_id></session_id>
+		<searchQuery><![CDATA[{"BI": "표면유속"}]]></searchQuery>
+		<sortField></sortField>
+		<sortBy></sortBy>
+		<curPage>1</curPage>
+		<rowCount>5</rowCount>
+	</parameterData>
+	<recordList>
+		<record rownum="1">
+			<item metaCode="CN" metaName="CN"><![CDATA[TRKO201300019602]]></item>
+			<item metaCode="DBCode" metaName="DB코드"><![CDATA[TRKO]]></item>
+			<item metaCode="Publisher" metaName="발행기관"><![CDATA[포항공과대학교 산학협력단]]></item>
+			<item metaCode="Pubdate" metaName="발행년월(일)"><![CDATA[20120400]]></item>
+			<item metaCode="Pubyear" metaName="발행년"><![CDATA[2012]]></item>
+			<item metaCode="Title" metaName="보고서제목"><![CDATA[임계열유속 증진을 위한 핵 연료봉 나노 구조 표면 개발]]></item>
+			<item metaCode="Title2" metaName="보고서제목2"><![CDATA[Development of nano-structure surface on nuclear fuel rod for enhancing critical heat flux]]></item>
+			<item metaCode="Abstract" metaName="초록"><![CDATA[Ⅲ. 연구개발의 내용 및 범위 본 연구의 최종적 개발 목표는 임계열유속 증진을 위하여 핵연료봉 표면에 나노 구조표면개발을 이루고 이에 대한 성능 평가를 시행하는 것이다. 1단계에서는 임계열유속 증진에 획기적인 성능을 보여주었던 나노유체 내의 나노 입자가 증착된 표면을 모사하는 표면을 개발하고, 풀 비등 상황에서 개발된 표면의 임계열유속 성능 검증을 시행하였다. 2단계에서는 실리콘(Silicon) 기반 위에 MEMS 기술을 이용여 형성하였던 마이크로/나노 복합 표면 구조를 갖는 표면에서의 임계열유속 증진 대한 결과를 실제적인 핵연료봉에 적용하고 제작된 표면에 대한 성능평가를 수행하였다. 우선, 평판형 히터에 표면 개질을 하고 그 성능 평가를 함으로써 핵 연료봉 물질에 대한 표면 개질 기법을 확립하였다. 그리고 그 영역을 확대하여 실제 핵연료봉 가동 조건을 고려한 상황에서의 성능 검증을 이룰 수 있도록, 실제적인 표면 개질 기법을 확립하고, 개질된 표면에 대한 관내, 관외, 가압 상황에서의 성능 검증을 이루었다.]]></item>
+			<item metaCode="Abstract2" metaName="초록2"><![CDATA[3. Contents & Scope of Research Main work of this research is the realization of CHF enhancement on to nuclear fuel rods surface, based on a previous research of CHF using nano/micro structure technique. At first step, nano-fluid deposited surface where shows intensive enhancement of CHF was developed, and the surface treatment idea is employed to develop a new nano-structured surface. And, a developed surface is evaluated through a pool boiling test. At second step, nano/micro combined structures on silicon surface using a MEMS technique is adopted to realize the surface onto an actual nuclear rods, those effect on CHF is tested. First above all, we modified nano-structure surface on flat plate heater, and have confirmed the development method of nano-structure surface on to nuclear rods material. And then, we have adopted the surface technique on to real operating condition, and we built up real condition surface modification. Finally, the performance of boiling by surface modification in inner/outer, pressurized condition has been tested.]]></item>
+			<item metaCode="Author" metaName="저자"><![CDATA[김무환]]></item>
+			<item metaCode="Contributors" metaName="참여연구자명"><![CDATA[김준원;강순호;안호선;김형모;이찬;]]></item>
+			<item metaCode="PageInfo" metaName="페이지정보"><![CDATA[174]]></item>
+			<item metaCode="FulltextURL" metaName="원문URL"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIFullTextView?keyValue=05787966&dbt=TRKO&cn=TRKO201300019602]]></item>
+			<item metaCode="ContentURL" metaName="ScienceON상세링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=REPORT&cn=TRKO201300019602]]></item>
+			<item metaCode="MobileURL" metaName="ScienceON모바일링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=REPORT&cn=TRKO201300019602&type=mobile]]></item>
+			<item metaCode="Keyword" metaName="주제어"><![CDATA[나노구조 표면개질,임계열유속,핵 연료봉,표면 젖음성,원자로 안전,모세관력,열전달]]></item>
+			<item metaCode="Keyword2" metaName="주제어2"><![CDATA[nano-structure,critical heat flux,nuclear fuel rod,surface wettability,nuclear safety,capillary,heat transfer]]></item>
+			<item metaCode="Lang" metaName="사용언어"><![CDATA[한국어]]></item>
+			<item metaCode="STCMajorCode" metaName="과학기술분류코드(대)"><![CDATA[]]></item>
+			<item metaCode="ManagingAgency" metaName="주관부처"><![CDATA[교육과학기술부]]></item>
+			<item metaCode="CoResearchOrg" metaName="공동연구기관명"><![CDATA[]]></item>
+			<item metaCode="CollaboratingOrg" metaName="협동연구기관명"><![CDATA[]]></item>
+			<item metaCode="ResearchMngAgency" metaName="연구관리전문기관"><![CDATA[한국연구재단]]></item>
+		</record>
+		<record rownum="2">
+			<item metaCode="CN" metaName="CN"><![CDATA[TRKO202100014401]]></item>
+			<item metaCode="DBCode" metaName="DB코드"><![CDATA[TRKO]]></item>
+			<item metaCode="Publisher" metaName="발행기관"><![CDATA[부천대학교]]></item>
+			<item metaCode="Pubdate" metaName="발행년월(일)"><![CDATA[20200600]]></item>
+			<item metaCode="Pubyear" metaName="발행년"><![CDATA[2020]]></item>
+			<item metaCode="Title" metaName="보고서제목"><![CDATA[표면영상유속(SIV) 분석을 활용한 분포형 도로 배수설계 알고리즘 개발]]></item>
+			<item metaCode="Title2" metaName="보고서제목2"><![CDATA[Development of Distributed Road Drainage Design Algorithm Using Analysis of Surface Image Velocity(SIV)]]></item>
+			<item metaCode="Abstract" metaName="초록"><![CDATA[□ 연구개요  도로 표면 흐름해석 및 분석을 위한 도로 조건 및 설계빈도 변화에 따른 도로의 종경사, 측구횡경사 및 설계빈도 변화에 따른 흐름을 고려한 도로의 표면 흐름 분석 및 수리특성(흐름 폭, 수심 및 유속)과 빗물받이의 차집효율의 상관관계를 도출하고 도로의 조건과 도심지 도로망 구성에 따른 빗물받이 설계 및 설치가 가능한 분포형 표면 2차원 흐름 해석 알고리즘을 개발하고 도로 조건 변화에 따른 2차원 흐름해석 결과를 활용한 분포형 표면 유출 모듈 및 도로 배수시설의 설계 알고리즘을 개발함    □ 연구 목표대비 연구결과  도로 조건 변화에 따른 2차원 흐름해석 결과를 활용한 분포형 표면 유출 모듈 및 도로 배수시설의 설계 알고리즘을 개발하기 위하여 아래와 같은 연구결과를 도출함   연속 설치된 빗물받이를 고려한 도로 표면 유출흐름 해석을 위한 수리모형 제작하여 수리실험을 수행하였으며, 흐름 폭, 수심 및 유속에 대한 빗물받이 차집유량 관계식 도출하였으며, 도출된 관계를 반영하여 Kinematic wave 방정식을 활용한 1차원 유출해석 알고리즘 개발함  도로 표면의 흐름유향 및 유속 측정을 위한 표면영상유속(PIV) 분석하여 흐름 방향 각 및 2차원 유속에 대한 빗물받이 차집유량 관계식 도출하였으며, 도출된 결과를 반영하여 Diffusive wave 방정식을 활용한 2차원 유출해석 알고리즘 개발함 또한 도로 표면의 흐름해석을 위한 3차원(FLUENT model) 모형의 적용성 분석함  도로 조건을 고려한 배수시설 설계 기법 및 기준 제시하고 도로 표면면의 유출특성을 고려한 분포형 지표 유출 모델 개발하고 GUI(Graphic User Interface) 환경 구축을 통한 도로배수시설 설계 프로그램 개발함    □ 연구개발결과의 중요성  본 연구의 목표인 도로 표면 2차원 흐름해석이 가능한 분포형 유출 알고리즘은 국내 도로의 특성을 고려하여 실제적인 도로에서 배수설계가 가능할 것으로 기대되며, 도로 조건 변화 및 설계빈도 변화를 포함한 도로 전체 구간에서의 종합적인 배수 설계가 가능하여 도로 표면수의 미배수로 인한 침수피해가 상당한 저감이 가능함  빗물받이 차집능력을 고려한 분포형 2차원 유출 모듈은 도로 구간에서의 전체적인 빗물 받이의 설계 및 표면 배수 등의 작업을 실무자가 용이하게 사용할 수 있도록 GUI 환경의 소프트웨어를 개발함으로서 상업화가 가능함  도로 빗물받이 설계 선진화 기술은 공공적인 성격이 강하므로 시장성보다는 공공의 이익에 기여하게 될 것이고 저개발 국가의 도시개발을 기술적으로 지원이 가능함    (출처 : 연구결과 요약문 2p)]]></item>
+			<item metaCode="Abstract2" metaName="초록2"><![CDATA[]]></item>
+			<item metaCode="Author" metaName="저자"><![CDATA[김정수]]></item>
+			<item metaCode="Contributors" metaName="참여연구자명"><![CDATA[]]></item>
+			<item metaCode="PageInfo" metaName="페이지정보"><![CDATA[124]]></item>
+			<item metaCode="FulltextURL" metaName="원문URL"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIFullTextView?keyValue=05787966&dbt=TRKO&cn=TRKO202100014401]]></item>
+			<item metaCode="ContentURL" metaName="ScienceON상세링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=REPORT&cn=TRKO202100014401]]></item>
+			<item metaCode="MobileURL" metaName="ScienceON모바일링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=REPORT&cn=TRKO202100014401&type=mobile]]></item>
+			<item metaCode="Keyword" metaName="주제어"><![CDATA[빗물받이;측구;차집유량;지표유출;배수시설;표면영상유속;도로 표면 흐름;]]></item>
+			<item metaCode="Keyword2" metaName="주제어2"><![CDATA[Kinematic wave;Diffusive wave;]]></item>
+			<item metaCode="Lang" metaName="사용언어"><![CDATA[한국어]]></item>
+			<item metaCode="STCMajorCode" metaName="과학기술분류코드(대)"><![CDATA[EI]]></item>
+			<item metaCode="ManagingAgency" metaName="주관부처"><![CDATA[과학기술정보통신부]]></item>
+			<item metaCode="CoResearchOrg" metaName="공동연구기관명"><![CDATA[]]></item>
+			<item metaCode="CollaboratingOrg" metaName="협동연구기관명"><![CDATA[]]></item>
+			<item metaCode="ResearchMngAgency" metaName="연구관리전문기관"><![CDATA[한국연구재단]]></item>
+		</record>
+		<record rownum="3">
+			<item metaCode="CN" metaName="CN"><![CDATA[TRKO201900025949]]></item>
+			<item metaCode="DBCode" metaName="DB코드"><![CDATA[TRKO]]></item>
+			<item metaCode="Publisher" metaName="발행기관"><![CDATA[한양대학교]]></item>
+			<item metaCode="Pubdate" metaName="발행년월(일)"><![CDATA[20181100]]></item>
+			<item metaCode="Pubyear" metaName="발행년"><![CDATA[2018]]></item>
+			<item metaCode="Title" metaName="보고서제목"><![CDATA[노화표면 최대열유속 향상을 위한 FGM 제어방식 개발]]></item>
+			<item metaCode="Title2" metaName="보고서제목2"><![CDATA[Development of FGM control technique for improvement of maximum heat flux on aged surface]]></item>
+			<item metaCode="Abstract" metaName="초록"><![CDATA[□ 연구개요  ● 원자력발전소 내 지속적인 노화로 인한 금속의 재료적 열화현상을 방지하기 위해 산화저항성이 높은 물질을 증착하는 FGM(Film Growth Mode) 박막증착기법이 개발되고 있음. 그런데, FGM 수행 및 노화 현상에서 금속 표면구조의 변화가 야기되어 최대열유속 발현에 지대한 영향을 미칠 수 있음.  ● 본 연구의 목표를 “노화 중 금속 표면의 최대열유속 발현 특성에 최적화 된 FGM 제어인자 도출 및 제어방식을 개발”로 설정하고, 재료의 사용수명 연장 및 교체주기 감소에 기여해 산업적 활용 가치를 높이고자 함.    □ 연구 목표대비 연구결과  ● 1차년도 연구에서 “순수 금속 박막표면에서 FGM 제어 방식이 표면 특성과 최대열 유속에 미치는 영향 평가”를 목표로 하여, 초기 거칠기, 기판온도 및 증착시간 등의 FGM 제어변수에 따라 최대열유속 증진도를 확인한 결과, 기판온도 및 초기 거칠기가 최대열유속 발현에 지배적인 영향을 미침을 확인함. 최대열유속 증진도를 바탕으로 분류한 표면등급에서 최고 등급인 표면은 150℃에서 증착된 순수 FeCrAl 표면 및 초기 사포등급 800 처리한 순수 Cr 표면이며, 이는 표면구조, 표면 거칠기, 표면 젖음성 또는 퍼짐성의 표면특성을 통해각각 삼중선 후진 이동 및 미세 액막 증발에서 기인함을 확인함.  ● 2차년도 연구에서 “FGM 제어방식이 단기노화 표면의 표면 특성과 최대열유속에 미치는 영향 평가”를 목표로 함. 최적 FGM 제어변수인 기판온도가 증가할수록 Cr 증착표면의 나노구조가 작아지는 것을 확인하였고, 단기노화 처리 후에도 위 경향은 유지되고 크기는 더 커짐을 확인함. 최적 기판온도는 순수 Cr 증착표면에서 25℃, 단기노화 Cr 증착표면에서 150℃임을 확인하였으며, 본 연구진이 새롭게 개발한 액체밀림거동 분석을 통해 흡수액체부피율의 상승으로 인해 단기노화 후 최대열유속 증진도가 더 커지는 것을 확인함.  ● 3차년도 연구에서 “FGM 제어방식이 장기노화 표면의 표면특성과 최대열유속에 미치는 영향 평가”를 목표로 함. 장기노화 처리 후 표면 산화물은 18.4% 생성되었으며, 증착기판온도에 따른 경향성은 단기노화보다 줄어든 것을 확인함. 장기노화 Cr 증착표면의 최적 기판온도는 600℃이었으며 단기노화 표면보다 증진도가 줄어든 것을 확인함. 이는 기존 표면 특성 및 액체 밀림거동분석을 통해 산화물의 성장으로 Cr 증착나노구조가 가지고 있던 흡수액체부피율의 감소에서 기인함을 확인함.    □ 연구개발결과의 중요성  ● 산화저항성 물질인 FeCrAl과 Cr의 FGM 박막증착 후 표면 분석 및 수조비등 최대 열유속 실험을 통해 나노구조를 형성하는 Cr 증착표면에서 최적 FGM 제어변수로 파악된 기판온도로 최대열유속 증진 제어가 용이함을 확인함.  ● 깨끗한 금속표면구조를 설계하여 최대열유속 증진을 최적화하는 FGM 제어 방법이 실제 상용노화환경 하에서도 동일한 증진도를 보장하지 않으며, 노화정도에 따라 최대열유속 증진도의 경향성이 달라짐을 확인함. 따라서 최적 FGM 제어에 노화영향과 최대열유속이 줄어드는 노화정도를 포함하여야 함을 강조함.  ● 본 연구에서 개발한 액체 밀림거동 분석을 통해 표면특성화 단계의 액체 흡수거동에서 실제 비등상황의 수력적 거동을 현상적으로 모사하여 비선형적인 최대열유속 증진을 해석 및 예측함.    (출처 : 연구결과 요약문 3p)]]></item>
+			<item metaCode="Abstract2" metaName="초록2"><![CDATA[]]></item>
+			<item metaCode="Author" metaName="저자"><![CDATA[김성중]]></item>
+			<item metaCode="Contributors" metaName="참여연구자명"><![CDATA[]]></item>
+			<item metaCode="PageInfo" metaName="페이지정보"><![CDATA[29]]></item>
+			<item metaCode="FulltextURL" metaName="원문URL"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIFullTextView?keyValue=05787966&dbt=TRKO&cn=TRKO201900025949]]></item>
+			<item metaCode="ContentURL" metaName="ScienceON상세링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=REPORT&cn=TRKO201900025949]]></item>
+			<item metaCode="MobileURL" metaName="ScienceON모바일링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=REPORT&cn=TRKO201900025949&type=mobile]]></item>
+			<item metaCode="Keyword" metaName="주제어"><![CDATA[FGM 박막증착기법;노화;임계열유속;비등열전달;표면 거칠기;액체 젖음성;액체 퍼짐성;액체 밀림성;]]></item>
+			<item metaCode="Keyword2" metaName="주제어2"><![CDATA[Capillary wicking;]]></item>
+			<item metaCode="Lang" metaName="사용언어"><![CDATA[한국어]]></item>
+			<item metaCode="STCMajorCode" metaName="과학기술분류코드(대)"><![CDATA[EB]]></item>
+			<item metaCode="ManagingAgency" metaName="주관부처"><![CDATA[과학기술정보통신부]]></item>
+			<item metaCode="CoResearchOrg" metaName="공동연구기관명"><![CDATA[]]></item>
+			<item metaCode="CollaboratingOrg" metaName="협동연구기관명"><![CDATA[]]></item>
+			<item metaCode="ResearchMngAgency" metaName="연구관리전문기관"><![CDATA[한국연구재단]]></item>
+		</record>
+		<record rownum="4">
+			<item metaCode="CN" metaName="CN"><![CDATA[TRKO201700001945]]></item>
+			<item metaCode="DBCode" metaName="DB코드"><![CDATA[TRKO]]></item>
+			<item metaCode="Publisher" metaName="발행기관"><![CDATA[포항공과대학교 산학협력단]]></item>
+			<item metaCode="Pubdate" metaName="발행년월(일)"><![CDATA[20090600]]></item>
+			<item metaCode="Pubyear" metaName="발행년"><![CDATA[2009]]></item>
+			<item metaCode="Title" metaName="보고서제목"><![CDATA[임계열유속 증진을 위한 핵 연료봉 나노구조표면 개발]]></item>
+			<item metaCode="Title2" metaName="보고서제목2"><![CDATA[]]></item>
+			<item metaCode="Abstract" metaName="초록"><![CDATA[2. 연구개발의 필요성  임계열유속은 원자력 발전소와 같은 분야에서 열전달 수단으로 이용이 되는 비등 현상의 한계점으로 작용한다. 이러한 한계점은 원전 사고로 이어질 수가 있기 때문에, 막대한 열 에너지를 생산하는 원자력 발전소에서는 안정성을 고려하여 임계열유속 대비 6O~70%의 출력으로 운전이 되고 있다. 하지만 이러한 임계열유속이 지연이 가능하다면, 원자력 발전의 안전성을 증대시키며, 더 높은 열유속 구간에서의 운전이 가능하여, 원전의 운전 효율을 향상시킬 수 있다. 이에 임계열유속 지연에 관련된 연구들은 오랫동안 계속 되어왔다. 최근 나노유체를 작동유체로 이용할 경우, 나노 입자의 표면 유착에 의한 표면특성 변화로 인한 임계열유속이 효과적으로 지연되는 연구 결과가 나오고 있다. 그러나 이러한 나노유체의 사용은 작동유체에 불순물이라 할 수 있는 나노 입자를 섞는 방법으로서 실제 운전 상황에의 적용을 꺼리고 있다. 그리하여 마이크로 나노 테크놀로지 기술을 이용하여 열전달 표면에 용도에 맞는 나노, 마이크로 단위의 미세한 인공구조를 제작하고자 한다. 따라서 전술한 두 가지 최신 기술 연구 사항을 접목시킬 경우, 나노단위 표면개질 공정을 이용하여 비등현상을 이용한 열전달 상황에서 임계열유속을 증가시킬 수 있는 기술의 개발이 가능하다. 즉, 위의 표면개질 공정을 핵 연료봉에 적용할 경우, 원자력 발전소의 원자로에서 발생하는 막대한 열에너지를 유체의 비등을 통하여 전달할 때 한계점인 임계열유속을 지연시킬 수 있을 것으로 기대된다. 또한 더 안전한 환경과 더 높은 효율을 제공함으로써 원자력 발전의 인식 전환에 큰 역할을 할 것이며, 원전 폐기물의 발생을 감소시켜 환경적으로도 이로운 역할을 할 수 있다. 마지막으로 앞서 언급한 바 있는 위의 두 첨단연구를 접목시키는 기술분야는 세계적으로도 연구가 요구되는 원천 기술 분야임에 따라 핵연료봉에 적용하는 표면 제작기술은 대한민국의 독보적이며 경제적 파급효과가 큰 가치있는 기술이 될 수 있다. 그러므로 이러한 활용도가 큰 선진기술의 선구적인 확보라는 면에서도 그 가치가 높다.  (출처 : 본문 2. 연구개발의 필요성)]]></item>
+			<item metaCode="Abstract2" metaName="초록2"><![CDATA[]]></item>
+			<item metaCode="Author" metaName="저자"><![CDATA[김무환]]></item>
+			<item metaCode="Contributors" metaName="참여연구자명"><![CDATA[]]></item>
+			<item metaCode="PageInfo" metaName="페이지정보"><![CDATA[45]]></item>
+			<item metaCode="FulltextURL" metaName="원문URL"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIFullTextView?keyValue=05787966&dbt=TRKO&cn=TRKO201700001945]]></item>
+			<item metaCode="ContentURL" metaName="ScienceON상세링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=REPORT&cn=TRKO201700001945]]></item>
+			<item metaCode="MobileURL" metaName="ScienceON모바일링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=REPORT&cn=TRKO201700001945&type=mobile]]></item>
+			<item metaCode="Keyword" metaName="주제어"><![CDATA[]]></item>
+			<item metaCode="Keyword2" metaName="주제어2"><![CDATA[]]></item>
+			<item metaCode="Lang" metaName="사용언어"><![CDATA[한국어]]></item>
+			<item metaCode="STCMajorCode" metaName="과학기술분류코드(대)"><![CDATA[P2]]></item>
+			<item metaCode="ManagingAgency" metaName="주관부처"><![CDATA[교육과학기술부]]></item>
+			<item metaCode="CoResearchOrg" metaName="공동연구기관명"><![CDATA[]]></item>
+			<item metaCode="CollaboratingOrg" metaName="협동연구기관명"><![CDATA[]]></item>
+			<item metaCode="ResearchMngAgency" metaName="연구관리전문기관"><![CDATA[한국과학재단]]></item>
+		</record>
+		<record rownum="5">
+			<item metaCode="CN" metaName="CN"><![CDATA[TRKO201800005352]]></item>
+			<item metaCode="DBCode" metaName="DB코드"><![CDATA[TRKO]]></item>
+			<item metaCode="Publisher" metaName="발행기관"><![CDATA[명지대학교]]></item>
+			<item metaCode="Pubdate" metaName="발행년월(일)"><![CDATA[20170500]]></item>
+			<item metaCode="Pubyear" metaName="발행년"><![CDATA[2017]]></item>
+			<item metaCode="Title" metaName="보고서제목"><![CDATA[표면영상유속계를 이용한 하천 유량 계측 기법의 측정 불확도 평가 기술 개발]]></item>
+			<item metaCode="Title2" metaName="보고서제목2"><![CDATA[Uncertainty Evaluation for Discharge Measurement Technique of Rivers using Surface Image Velocimetry]]></item>
+			<item metaCode="Abstract" metaName="초록"><![CDATA[연구의 목적 및 내용  표면영상유속계를 이용한 하천의 유량 산정에 영향을 미치는 오차 요인들을 규명하고, 각각의 오차 요인들에 대한 정량적인 오차를 인공영상을 통해 분석하여 표면영상유속계의 유량 산정 불확도를 평가할 수 있는 기술을 개발하는데 목적을 둔다. 주요 연구 내용은 다음과 같다.    - 표면영상유속계를 이용한 유량 산정 과정의 오차 요인 규명  - 표면영상유속계를 이용한 유량 산정에 대한 수학적 모델 설정  - 인공영상을 이용한 표면영상유속계의 오차 분석  - 표면영상유속계의 A형 표준불확도와 B형 표준불확도 산정  - GUM을 이용한 표면영상유속계의 유량 산정 불확도 평가 기술 개발  - 표면영상유속계의 유량 산정 불확도 평가 기술의 현장 적용성 검토    연구결과  본 연구에서는 표면영상유속계를 활용한 하천 유량 측정 불확도를 평가 기술을 개발함  이를 위해 다음과 같은 연구 성과를 달성함  - 상관영역 크기, 입자밀도 및 입자크기 변화에 따른 오차 분석  - 최적 상관영역 크기 결정 기법 개발 및 불확도 기준 제시  - 상관영역 내 전단 흐름에 대한 불확도 평가 기준 제시  - 상관영역 내 회전 흐름에 대한 불확도 평가 기준 제시  - 표면영상유속계의 최적 상관영역 크기 결정 기술의 현장 적용    연구결과의 활용계획  - 본 연구는 표면영상유속계를 이용한 유량 산정 기법에 대한 불확도 평가 기술을 세계 최초로 개발함으로서 국내 하천계측기술을 세계적인 수준으로 높여줄 것으로 기대된다.    - 본 연구의 결과로 표면영상유속계의 유량 산정 결과의 불확도가 제시될 수 있다면 다양한 하천 유량조사 업무에 표면영상유속계를 즉각 활용하여 좀 더 양질의 수문자료를 확보하는데 크게 기여할 것으로 기대된다.    (출처 : 요약문 4p)]]></item>
+			<item metaCode="Abstract2" metaName="초록2"><![CDATA[Purpose&contents  We have developed a technology that can identify the error factors affecting the river flow rate calculation using the surface image velocimeter and analyze the quantitative error of each uncertainty factor through the artificial image to evaluate the uncertainty of the flow rate calculation of the surface image velocimeter. The purpose is to make. Major research contents are as follows.    - Identification of Error Factors in Flow Calculation Process Using Surface Image Velocimetry  - Mathematical model setting for discharge calculation using surface image anemometer  - Error analysis of surface image anemometer using artificial image  - Estimation of Type A standard uncertainty and Type B uncertainty of surface anemometer  - Development of uncertainty evaluation technique of flow rate calculation of surface image flowmeter using GUM  - Application of the evaluation technique of the uncertainty of the flow rate estimation of the surface image flowmeter to the field    Result  In this study, we developed a technique to evaluate the uncertainty of river flow measurement using a surface image velocimeter.    - Analysis of error according to size of correlation area, particle density and particle size  - Development of Optimum Correlation Zone Size Decision Technique and Presentation of Uncertainty Criteria  - Uncertainty evaluation criteria for shear flow in the correlated area  - Uncertainty evaluation criteria for rotating flow in the correlation area  - Field Application of Optimum Correlation Area Size Determination Technique for Surface Image Velocimeter    Expected Contribution  - This study is expected to improve the technology of the river measurement in the world by developing the uncertainty evaluation technology for the flow rate calculation technique using the surface image anemometer for the first time in the world.    - As a result of this study, if the uncertainty of the flow rate calculation result of the surface image anemometer can be suggested, it is expected that it will contribute to securing more good quality hydrological data immediately by utilizing the surface image anemometer in various stream flow investigation work.    (출처 : SUMMARY 5p)]]></item>
+			<item metaCode="Author" metaName="저자"><![CDATA[김서준]]></item>
+			<item metaCode="Contributors" metaName="참여연구자명"><![CDATA[]]></item>
+			<item metaCode="PageInfo" metaName="페이지정보"><![CDATA[63]]></item>
+			<item metaCode="FulltextURL" metaName="원문URL"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIFullTextView?keyValue=05787966&dbt=TRKO&cn=TRKO201800005352]]></item>
+			<item metaCode="ContentURL" metaName="ScienceON상세링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=REPORT&cn=TRKO201800005352]]></item>
+			<item metaCode="MobileURL" metaName="ScienceON모바일링크"><![CDATA[http://click.ndsl.kr/servlet/OpenAPIDetailView?keyValue=05787966&target=REPORT&cn=TRKO201800005352&type=mobile]]></item>
+			<item metaCode="Keyword" metaName="주제어"><![CDATA[표면영상유속계;측정 불확도;오차 분석;유량 조사;하천;유속;인공영상;]]></item>
+			<item metaCode="Keyword2" metaName="주제어2"><![CDATA[Surface Image Velocimetry;Uncertainty;Error Analysis;Discharge measurement;River;Flow velocity;Artificial Image;]]></item>
+			<item metaCode="Lang" metaName="사용언어"><![CDATA[한국어]]></item>
+			<item metaCode="STCMajorCode" metaName="과학기술분류코드(대)"><![CDATA[EI]]></item>
+			<item metaCode="ManagingAgency" metaName="주관부처"><![CDATA[과학기술정보통신부]]></item>
+			<item metaCode="CoResearchOrg" metaName="공동연구기관명"><![CDATA[]]></item>
+			<item metaCode="CollaboratingOrg" metaName="협동연구기관명"><![CDATA[]]></item>
+			<item metaCode="ResearchMngAgency" metaName="연구관리전문기관"><![CDATA[한국연구재단]]></item>
+		</record>
+	</recordList>
+</MetaData>

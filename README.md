@@ -261,6 +261,7 @@ file and its `manifest.json` row.
 | E · Open access | DOAJ, CORE, BASE, OpenAIRE, Zenodo, Unpaywall, HAL |
 | F · Domain | DBLP (CS), IACR (crypto), SSRN (econ/law), CiteSeerX |
 | G · Web | DuckDuckGo, GitHub, crawl4ai / firecrawl |
+| H · Korean (opt-in) | KISTI ScienceON — KCI-indexed papers, domestic R&D reports, patents *(needs credentials)* |
 
 ### Domain → bucket routing
 
@@ -273,6 +274,16 @@ file and its `manifest.json` row.
 | Economics / social science / law | F (SSRN) · B · C | G |
 | Math | A · B · C | F |
 | Interdisciplinary / unknown | A · B · C · D | E · G |
+| Korean-language / domestic (KCI, R&D, policy) | H · C · B | E · G |
+
+**Bucket H — KISTI ScienceON** is an opt-in Korean-language source covering KCI-indexed
+journal papers, domestic R&D reports, and Korean patents — the blind spot the other
+(English-centric) buckets leave. It activates only when `KISTI_CLIENT_ID` /
+`KISTI_AUTH_KEY` / `KISTI_MAC` are set (spec:
+[`references/kisti.md`](./skills/scholar-megasearch/references/kisti.md)); runs without
+those credentials simply skip it. Merge dedup is Unicode-aware, so DOI-less Korean
+records survive on their Hangul title. Route it for Korean-language or domestic-trend
+queries, and narrow it with `KISTI_TARGET=arti,report,patent`.
 
 Full per-bucket tool lists are in
 [`skills/scholar-megasearch/references/sources.md`](./skills/scholar-megasearch/references/sources.md);

@@ -1,6 +1,10 @@
 __pycache__/
 *.pyc
 .DS_Store
+# secrets — never commit real KISTI/API credentials
+.env
+.env.*
+*.env
 setup/mcp.servers.resolved.json
 setup/mcp.servers.codex.resolved.toml
 literature_search/

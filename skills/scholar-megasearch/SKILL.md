@@ -187,12 +187,13 @@ corroborated by ≥2 databases) alongside the full `corpus.json`.
 
 ## Fallback when MCP is unavailable
 If MCP servers are down/headless, searchers use `scripts/search_local.py {arxiv|
-semanticscholar|ddg} "query"` with the installed host venv Python. arXiv may
+semanticscholar|ddg|kisti} "query"` with the installed host venv Python. arXiv may
 rate-limit (HTTP 429) under heavy fan-out — stagger or lean on Asta/OpenAlex. The Asta
 (Semantic Scholar) MCP is remote and needs **no key** (a key only raises rate limits) —
 in headless/cron runs just ensure network access, or fall back to
 `search_local.py semanticscholar`. Never let a host-specific scholar gateway be a
 bucket's only tool (absent in headless runs).
+`kisti` 소스는 국내(KCI/보고서/특허) 전용이며 `KISTI_CLIENT_ID`/`KISTI_AUTH_KEY`/`KISTI_MAC` 환경변수가 있어야 동작한다(`references/kisti.md`). 자격증명이 없으면 이 버킷을 건너뛴다.
 
 For failure-recovery runs, use the resilient local ladder instead of aborting:
 ```bash

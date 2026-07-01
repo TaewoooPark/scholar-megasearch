@@ -100,6 +100,11 @@ Agent prompt skeleton (one per bucket):
 > (set source+query). Write the JSON list to `{run}/raw/{bucket}.json`. Report only the
 > count written and failed-source names.
 
+**Bucket H (KISTI) searcher 예시:** 한국어/국내 주제일 때만 포함. 도구: `scripts/search_local.py
+kisti "<한국어 질의>"` (필요 시 `KISTI_TARGET=arti` 등으로 한정). 반환 레코드의 `source`는
+`kisti-arti|kisti-report|kisti-patent`. DOI 없는 국내 보고서는 `url`(ScienceON 상세링크)로 추적.
+영어 facet 대신 **한국어 facet**을 이 버킷에 배정하라.
+
 For L3+ snowball/critic waves, reuse this skeleton with seeds or critic-named facets in
 place of `{facets}`, writing each wave to a new `raw/<bucket>_w2.json` etc. before re-merging.
 
