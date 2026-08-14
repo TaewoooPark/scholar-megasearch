@@ -86,19 +86,29 @@ skills to scrape a specific page → markdown. `WebSearch`/`WebFetch` as generic
 
 Bucket H(KISTI)는 한국어 질의에서 가장 강하다 — 한국어 facet을 최소 1개 포함해 fan-out하라.
 
-`unpaywall`/`scihub`/`download_with_fallback` are for **acquisition** (getting the PDF
-of an already-identified paper), not discovery — use them in the optional download phase.
+`unpaywall` and source-specific download tools are for **acquisition** (getting the PDF
+of an already-identified paper), not discovery — use them in the download phase.
 
 ## Acquisition (download original PDFs + full-text read)
-**Primary (automated, no MCP):** `scripts/fetch_pdfs.py corpus.json -o pdfs --email <e>
---top K` acquires the top-K originals via free/legal routes (open-access `pdf_url` →
-arXiv direct → Unpaywall OA API), verifies each is a real `%PDF-`, and writes
-`pdfs/manifest.json`. Papers with no free route get `status: "needs_mcp"`.
+**Primary (automated, no MCP/browser extension):** run `<host-skill-venv>/bin/python
+scripts/fetch_pdfs.py corpus.json -o pdfs --email <e> --top K`. It attempts known OA
+`pdf_url` → arXiv → Unpaywall, then opens only unresolved DOI records in one reusable,
+temporary Playwright context. The browser follows the machine's current LAN/VPN route,
+tries installed Chrome/Edge before bundled Chromium, extracts `citation_pdf_url`, PDF
+links/data attributes and PDF network responses, and requests candidates with the same
+browser-context cookies. It accepts a file only when its bytes contain the `%PDF-`
+signature and deletes the temporary profile at shutdown.
 
-**MCP fallback (for `needs_mcp` / closed-access):** `paper-search-mcp.
-download_with_fallback` (tries multiple hosts) or source-specific `download_arxiv` /
-`download_openalex` / `download_semantic` / `download_scihub`. These are session tools
-the standalone script can't call.
+The browser path is for legitimate IP/proxy entitlements, not paywall bypass. It neither
+reads the user's normal browser profile nor automates login/CAPTCHA. Manifest failures are
+classified as `not_entitled`, `auth_required`, `captcha`, `rate_limited`,
+`browser_unavailable`, `invalid_pdf`, `no_doi`, or `failed`; `--retry-unresolved` keeps
+successful rows and retries the rest after a network change. `--no-browser` is an explicit
+OA-only opt-out. A pre-authorized native Claude/Codex browser can be an interactive
+follow-up for an existing login session, but is never required by the primary path.
+
+**Source-specific fallback:** use legal source tools such as `download_arxiv`,
+`download_openalex`, or `download_semantic` when they expose a known authorized copy.
 
 **Full-text read:** `read_*_paper` MCP tools, or `pdfplumber` / `pymupdf`
 from the installed host venv on the downloaded PDFs for text extraction.

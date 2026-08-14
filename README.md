@@ -49,7 +49,7 @@
 - 🧵 **Subagent fan-out** — one searcher per source bucket, running in parallel, so breadth doesn't cost you serial wall-clock.
 - 🧹 **Dedup with provenance** — merged by DOI → arXiv-id → normalized title; every paper records *which* databases surfaced it.
 - 📊 **Corroboration ranking** — papers found by more independent databases rank higher, not just the ones with good SEO.
-- 📄 **Original PDFs** — top-K acquired automatically via open-access routes, with a manifest of what landed and what needs a paywall fallback.
+- 📄 **Original PDFs** — top-K acquired open-access-first, then through current LAN/VPN institutional entitlement in an isolated browser, with every outcome recorded in a manifest.
 - 🧭 **Domain-aware routing** — physics, life sciences, CS, crypto, economics, or math each pull the right subset of databases.
 
 ## Why It Exists
@@ -64,8 +64,8 @@ into a doc, hand-deduplicating, and then hunting each PDF down separately.
 literature" as a fan-out problem: decompose the topic, send each **source bucket** to
 its own subagent, and reconcile everything afterward. The output isn't a chat reply —
 it's a corpus on disk where every entry is deduplicated, ranked by how many
-independent databases corroborate it, and backed by a downloaded PDF wherever a free
-route exists.
+independent databases corroborate it, and backed by a downloaded PDF wherever an
+authorized route exists.
 
 ## How It Works
 
@@ -96,7 +96,7 @@ topic: "graph neural networks for molecular property prediction"
   facets:  6 subqueries        buckets: A B C E G (5 searchers)
   raw hits: ~310 across buckets
   unique:   ~150 after dedup   (≈60 corroborated by ≥2 databases)
-  PDFs:     22 / 25 acquired   (3 flagged needs_mcp — paywalled)
+  PDFs:     22 / 25 acquired   (3 classified not_entitled)
   output:   ./literature_search/gnn-molecular-property_2026-05-29/
 ```
 
@@ -136,6 +136,11 @@ the **remote** [Ai2 Asta MCP](https://allenai.org/asta/resources/mcp): nothing t
 install, and it works **without a key** (rate-limited). For higher rate limits, request
 a free key and add a literal `x-api-key` header to the `asta` entry. Asta use is
 subject to Ai2's terms (see [Attribution](#attribution)).
+
+The same installer pins Playwright and installs an isolated Chromium fallback in each
+host venv. PDF acquisition prefers system Chrome/Edge when available, but does not need
+the Claude or Codex Chrome extension and never attaches to the user's regular profile.
+The first uncached Chromium install uses a few hundred megabytes of disk and download.
 
 **Requirements**
 
@@ -193,12 +198,19 @@ python3 ~/.claude/skills/scholar-megasearch/scripts/resilient_search.py \
   "graph neural networks" --sources arxiv,semanticscholar,ddg \
   -o raw/local_recovery.json --status raw/local_recovery.status.json
 
-# acquire original PDFs for the top 25 ranked papers
-python3 ~/.claude/skills/scholar-megasearch/scripts/fetch_pdfs.py \
+# acquire original PDFs for the top 25 ranked papers (OA, then current LAN/VPN entitlement)
+~/.claude/skill_venv/bin/python \
+  ~/.claude/skills/scholar-megasearch/scripts/fetch_pdfs.py \
   corpus.json -o ./pdfs --email you@example.com --top 25
+
+# keep acquired rows and retry unresolved papers after changing network
+~/.claude/skill_venv/bin/python \
+  ~/.claude/skills/scholar-megasearch/scripts/fetch_pdfs.py \
+  corpus.json -o ./pdfs --email you@example.com --top 25 --retry-unresolved
 
 # Codex default script path is:
 # ~/.agents/skills/scholar-megasearch/scripts/
+# Codex default venv is: ~/.codex/skill_venv/
 ```
 
 ### Depth levels
@@ -304,7 +316,7 @@ scholar-megasearch/
     ├── scholar-megasearch/   # the skill
     │   ├── SKILL.md
     │   ├── references/{sources.md, orchestration.md}
-    │   └── scripts/{merge_corpus.py, fetch_pdfs.py, search_local.py}
+    │   └── scripts/{merge_corpus.py, fetch_pdfs.py, browser_acquire.py, search_local.py}
     └── arxiv-search/          # supporting venv-search skill
 ```
 
@@ -315,10 +327,11 @@ time, and Semantic Scholar is the remote Ai2 Asta service. See [Attribution](#at
 
 ## Notes & Limitations
 
-- **PDF acquisition is open-access-first.** `fetch_pdfs.py` only uses free/legal
-  routes (a known OA `pdf_url`, arXiv, Unpaywall) and verifies every file is a real
-  `%PDF-`. Closed-access papers are flagged `needs_mcp` in the manifest; fetching
-  those is left to the session's MCP download tools.
+- **PDF acquisition is open-access-first and entitlement-aware.** `fetch_pdfs.py` tries
+  a known OA `pdf_url`, arXiv, and Unpaywall before resolving failed DOI records in a
+  temporary browser on the current LAN/VPN. It validates every `%PDF-`, never reads the
+  user's normal browser profile, and classifies `not_entitled`, `auth_required`, CAPTCHA,
+  rate-limit, and runtime failures. It does not automate login or bypass publisher access.
 - **arXiv rate-limits heavy fan-out** (HTTP 429). Searchers stagger and lean on
   Semantic Scholar / OpenAlex when arXiv pushes back.
 - **`paper-search-mcp` must be the git-main build** — the PyPI release omits

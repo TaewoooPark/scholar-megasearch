@@ -7,8 +7,9 @@ description: >-
   BASE, DBLP, IACR, SSRN, Zenodo, Unpaywall, plus web/GitHub — then deduplicates
   by DOI/arXiv-id/title into one ranked corpus and synthesizes it. Use when the
   user wants a broad/exhaustive literature sweep, a large-scale paper search, a
-  systematic review corpus, citation snowballing, or to find as many papers as
-  possible on a topic across many databases at once. Triggers: "massive literature
+  systematic review corpus, citation snowballing, institution-entitled PDF collection,
+  or to find as many papers as possible on a topic across many databases at once.
+  Triggers: "massive literature
   search", "literature review", "search across every database", "systematic search",
   "mega search", "search every source", "exhaustive search". Localized trigger phrases
   in other languages map to the same intent.
@@ -121,19 +122,27 @@ L4 → 100, **L5 → `all`** (every paper in the corpus). `--top all` (or `0`) t
 whole corpus; files are saved as `NN_<slug>.pdf` by `corpus.json` rank, matching the
 `[#NN]` in `summary.md`:
 ```bash
-python3 <skill-dir>/scripts/fetch_pdfs.py \
+<host-skill-venv>/bin/python <skill-dir>/scripts/fetch_pdfs.py \
   ./literature_search/<slug>_<date>/corpus.json \
   -o ./literature_search/<slug>_<date>/pdfs \
   --email you@example.com --top 30
 ```
-This auto-acquires via the free/legal routes — known open-access `pdf_url`, arXiv
-direct, then Unpaywall OA API — verifying each file is a real PDF, and writes
-`pdfs/manifest.json`. Papers with no free route are flagged `"status": "needs_mcp"`.
-For those, fetch via the session MCP download tools (`paper-search-mcp.
-download_with_fallback`, source-specific `download_*`, or `download_scihub`) — a
-standalone script cannot reach MCP. To read extracted full text afterward, use the
-`read_*_paper` MCP tools or `pdfplumber`/`pymupdf` from the installed host venv.
-See `references/sources.md` for the full acquisition tool list.
+Resolve `<host-skill-venv>` from the host defaults above. The script first uses legal OA
+routes — known `pdf_url`, arXiv, then Unpaywall — and sends only unresolved DOI records
+to a disposable Playwright browser. That browser uses the machine's current LAN/VPN,
+tries system Chrome/Edge then bundled Chromium, and never attaches to the user's normal
+profile. It extracts PDF metadata/links, reuses browser-context cookies, validates the
+`%PDF-` signature, and writes `pdfs/manifest.json`.
+
+Keep browser fallback enabled by default; use `--no-browser` only when explicitly asked.
+After moving onto an entitled network, add `--retry-unresolved` to retain successful rows
+and retry failures. Treat `not_entitled`, `auth_required`, `captcha`, `rate_limited`,
+`browser_unavailable`, `invalid_pdf`, `no_doi`, and `failed` as honest final states; do
+not log in, solve a CAPTCHA, copy browser cookies, or bypass publisher controls. A host's
+native Claude/Codex browser session may be used only as an explicitly authorized,
+interactive follow-up, never as the unattended primary path. To read acquired full text,
+use the `read_*_paper` MCP tools or `pdfplumber`/`pymupdf` from the host venv. See
+`references/sources.md` for detailed acquisition behavior.
 
 ## Depth levels (L1–L5)
 One knob: breadth (facets × buckets × hits) and recursion (extra waves) scale together.
