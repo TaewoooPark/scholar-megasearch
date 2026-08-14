@@ -5,6 +5,8 @@ semanticscholar==0.11.0
 ddgs==9.10.0
 pdfplumber==0.11.9
 crawl4ai==0.8.0
+# Direct dependency for entitled DOI acquisition; do not rely on crawl4ai's transitive pin.
+playwright==1.60.0
 pymupdf
 python-dotenv==1.2.2
 # KISTI ScienceON (Bucket H) token flow — kisti_client.py

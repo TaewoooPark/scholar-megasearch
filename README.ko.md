@@ -49,7 +49,7 @@
 - 🧵 **서브에이전트 팬아웃** — 소스 버킷당 검색 에이전트 1개를 병렬 실행 → 넓은 커버리지를 직렬 대기 없이.
 - 🧹 **출처를 동반한 중복제거** — DOI → arXiv-id → 정규화 제목으로 병합하고, 각 논문이 *어떤* DB에서 나왔는지 기록.
 - 📊 **교차 검증 랭킹** — 독립된 DB가 더 많이 잡아낸 논문이 상위로 — SEO 잘 된 논문이 아니라.
-- 📄 **원본 PDF** — 상위 K편을 오픈액세스 경로로 자동 확보, 받은 것·페이월 폴백 필요한 것을 manifest로 기록.
+- 📄 **원본 PDF** — 상위 K편을 OA 우선으로 확보한 뒤 현재 LAN/VPN의 기관 구독 권한까지 격리 브라우저로 활용하고, 모든 결과를 manifest로 기록.
 - 🧭 **도메인 인식 라우팅** — 물리·생명과학·CS·암호·경제·수학마다 알맞은 DB 부분집합을 자동 선택.
 
 ## 왜 필요한가
@@ -62,7 +62,7 @@ DB를 하나씩 검색하는 방식이 좋은 논문을 놓치는 이유다. arX
 `scholar-megasearch`는 이걸 한 번의 요청으로 압축한다. "문헌 검색"을 팬아웃 문제로 다룬다 —
 주제를 분해하고, 각 **소스 버킷**을 독립 서브에이전트에 보내고, 사후에 전부 화해시킨다.
 산출물은 채팅 답변이 아니라 디스크 위의 코퍼스다. 모든 항목이 중복제거되고, 몇 개의 독립
-DB가 교차 검증하는지로 랭킹되며, 무료 경로가 있으면 PDF가 함께 받쳐진다.
+DB가 교차 검증하는지로 랭킹되며, OA 또는 기관 권한 경로가 있으면 PDF가 함께 받쳐진다.
 
 ## 동작 방식
 
@@ -90,7 +90,7 @@ DB가 교차 검증하는지로 랭킹되며, 무료 경로가 있으면 PDF가 
   facets:  서브쿼리 6개        buckets: A B C E G (검색 에이전트 5개)
   raw hits: 버킷 합산 ~310건
   unique:   중복제거 후 ~150건  (≈60건은 2개 이상 DB 교차검증)
-  PDFs:     25편 중 22편 확보   (3편 needs_mcp — 페이월)
+  PDFs:     25편 중 22편 확보   (3편 not_entitled로 분류)
   output:   ./literature_search/gnn-molecular-property_2026-05-29/
 ```
 
@@ -123,6 +123,11 @@ Codex 대상에서는 개인 스킬을 기본적으로 `$HOME/.agents/skills`에
 `setup/mcp.servers.codex.resolved.toml`을 쓴다. `codex` CLI가 있으면
 `--register-codex-mcp`를 붙여 `arxiv-mcp-server`, `asta`, `paper-search-mcp`를
 `codex mcp add`로 자동 등록할 수 있다.
+
+같은 설치 과정이 각 호스트 venv에 Playwright를 고정하고 격리 Chromium 폴백까지 설치한다.
+PDF 수집은 설치된 Chrome/Edge를 우선 사용하지만 Claude/Codex Chrome 확장은 필요하지 않으며,
+사용자의 평소 브라우저 프로필에는 연결하지 않는다. 캐시에 Chromium이 없으면 최초 설치 시
+수백 MB의 다운로드와 디스크 공간을 사용한다.
 
 두 호스트 모두 `paper-search-mcp`는 git main을 사용한다 — PyPI 빌드는
 Crossref/OpenAlex가 빠져 있다 — 그리고 `arxiv-mcp-server`는 `uvx`로 실행한다.
@@ -183,12 +188,19 @@ python3 ~/.claude/skills/scholar-megasearch/scripts/resilient_search.py \
   "graph neural networks" --sources arxiv,semanticscholar,ddg \
   -o raw/local_recovery.json --status raw/local_recovery.status.json
 
-# 상위 25편 원본 PDF 확보
-python3 ~/.claude/skills/scholar-megasearch/scripts/fetch_pdfs.py \
+# 상위 25편 원본 PDF 확보(OA 우선, 이후 현재 LAN/VPN 기관 권한)
+~/.claude/skill_venv/bin/python \
+  ~/.claude/skills/scholar-megasearch/scripts/fetch_pdfs.py \
   corpus.json -o ./pdfs --email you@example.com --top 25
+
+# 네트워크를 바꾼 뒤 성공한 행은 유지하고 미해결 논문만 재시도
+~/.claude/skill_venv/bin/python \
+  ~/.claude/skills/scholar-megasearch/scripts/fetch_pdfs.py \
+  corpus.json -o ./pdfs --email you@example.com --top 25 --retry-unresolved
 
 # Codex 기본 스크립트 경로:
 # ~/.agents/skills/scholar-megasearch/scripts/
+# Codex 기본 venv: ~/.codex/skill_venv/
 ```
 
 ### 깊이 단계 (L1–L5)
@@ -290,7 +302,7 @@ scholar-megasearch/
     ├── scholar-megasearch/   # 스킬 본체
     │   ├── SKILL.md
     │   ├── references/{sources.md, orchestration.md}
-    │   └── scripts/{merge_corpus.py, fetch_pdfs.py, search_local.py}
+    │   └── scripts/{merge_corpus.py, fetch_pdfs.py, browser_acquire.py, search_local.py}
     └── arxiv-search/          # 보조 venv 검색 스킬
 ```
 
@@ -301,9 +313,11 @@ paper-search-mcp)를 상위 소스에서 가져오고, Semantic Scholar는 원�
 
 ## 참고 & 한계
 
-- **PDF 확보는 오픈액세스 우선.** `fetch_pdfs.py`는 무료·합법 경로(알려진 OA `pdf_url`,
-  arXiv, Unpaywall)만 쓰고 모든 파일이 진짜 `%PDF-`인지 검증한다. 폐쇄형 논문은 manifest에
-  `needs_mcp`로 표기되며, 그 확보는 세션의 MCP 다운로드 도구에 맡긴다.
+- **PDF 확보는 OA 우선이며 기관 권한을 인식한다.** `fetch_pdfs.py`는 알려진 OA `pdf_url`,
+  arXiv, Unpaywall을 먼저 시도하고, 실패한 DOI만 현재 LAN/VPN 위의 임시 브라우저에서 푼다.
+  모든 `%PDF-`를 검증하고 평소 브라우저 프로필은 읽지 않으며 `not_entitled`,
+  `auth_required`, CAPTCHA, 레이트리밋, 런타임 실패를 구분한다. 로그인 자동화나 출판사
+  접근 통제 우회는 하지 않는다.
 - **arXiv는 헤비 팬아웃에 레이트리밋(HTTP 429)을 건다.** 검색 에이전트는 요청을 분산하고
   arXiv가 막으면 Semantic Scholar / OpenAlex에 의존한다.
 - **`paper-search-mcp`는 반드시 git-main 빌드.** PyPI 릴리스는 Crossref·OpenAlex가 빠져

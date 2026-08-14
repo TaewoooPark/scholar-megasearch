@@ -28,7 +28,7 @@ REGISTER_CODEX_MCP=0
 PYTHON_BIN="${PYTHON_BIN:-${PYTHON:-python3}}"
 
 usage() {
-  sed -n '2,31p' "$0" | sed 's/^# \{0,1\}//'
+  sed -n '2,/^set -euo pipefail$/p' "$0" | sed '$d; s/^# \{0,1\}//'
 }
 
 while [ "$#" -gt 0 ]; do
@@ -137,6 +137,10 @@ install_skill_venv() {
   echo "==> [${host}] installing Python deps into ${skill_venv}"
   "${skill_venv}/bin/python" -m pip install -q --upgrade pip
   "${skill_venv}/bin/python" -m pip install -q -r "${REPO_DIR}/setup/requirements.txt"
+  echo "==> [${host}] ensuring the isolated PDF-acquisition browser is installed"
+  # Keep the branded system Chrome/Edge fast path, but install Playwright Chromium as
+  # an automatic fallback so neither Claude nor Codex needs a browser extension.
+  "${skill_venv}/bin/python" -m playwright install chromium
 }
 
 install_paper_search_mcp() {
